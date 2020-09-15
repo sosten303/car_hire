@@ -1,0 +1,1638 @@
+/*carHire css file*/
+/*@import url('https://fonts.googleapis.com/css?font-family=Lato');*/
+ body {
+  	font-family: sans-serif;
+  	background-color: lavender;
+  	overflow-x: hidden;
+  	padding: 0px;
+  	margin: 0px;
+  }
+
+  nav {
+    background-color: rgba(0,0,0,0.3);
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    z-index: 1;
+    padding: 0px !important;
+    font-size: 12px;
+    font-family: 'Lato', sans-serif;
+  }
+
+  ul#nav-bar {
+    /*background-color: #f4f4;*/
+    padding: 5px;
+  }
+
+  ul#nav-bar li {
+    /*background-color: #f00;*/
+    display: inline-block;
+    list-style-type: none;
+    margin-right: 5px;
+    padding: 8px 5px;
+  }
+
+  a#logo {
+   font-size: 22px;
+   color: #f4f4f4;
+   font-weight: bold;
+  }
+
+  ul#nav-bar li a {
+    padding: 5px;
+    text-decoration: none;
+    color: #fff;
+  }
+
+  ul#nav-bar li a:hover {
+    color: #f00;
+  }
+
+  #nav-bar-content {
+    display: inline;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    /*background-color: rgba(0,0,0,0.8);*/
+    padding: 5px;
+  }
+
+  #nav-bar-content li {
+    margin-left: 10px;
+  }
+
+  #nav-bar-content li i {
+    margin-left: 3px;
+  }
+
+  nav li#book_btn {
+    background-color: rgba(255,25,0,0.6588);
+    font-size: 15px;
+    border-radius: 3px;
+    border: 1px solid red;
+    color: #eee;
+    cursor: pointer;
+  }
+
+  nav li#book_btn:hover {
+    background-color: red;
+  }
+
+  ul#reserv_nav, ul#vehicle_nav {
+    background-color: #111;
+    padding: 10px;
+    margin: 5px 20px 0px -5px;
+    border: 1px solid #4449;
+    border-radius: 2px;
+    position: absolute;
+    top: 40px;
+    display: none;
+  }
+
+  li#reservation:hover, li#vehicles:hover {
+    background-color: #111;
+    border: 1px solid #4449;
+    border-radius: 2px;
+    padding: 8px 4px 30px 4px;
+  }
+
+  li#reservation:hover ul#reserv_nav, li#vehicles:hover ul#vehicle_nav {
+    display: block;
+  }
+
+  li#reservation:hover a i, li#vehicles:hover a i {
+    color: #fff;
+    transform: rotateX(180deg);
+  }
+
+  ul#reserv_nav li, ul#vehicle_nav li {
+    list-style-type: none;
+    background-color: #222;
+    border: 1px solid #3339;
+    border-radius: 2px;
+    display: block;
+    padding: 1px;
+    margin: 1px auto;
+  }
+
+  ul#reserv_nav li:hover, ul#vehicle_nav li:hover {
+    background-color: #f009;
+    border: 1px solid #f008;
+  }
+
+  ul#reserv_nav li a, ul#vehicle_nav li a {
+    display: block;
+    padding: 5px;
+    margin: 1px;
+  }
+
+  ul#reserv_nav li:hover a, ul#vehicle_nav li:hover a {
+    color: #fff;
+  }
+
+
+  /*==== book form ======*/
+
+  section#book_form {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    display: none;
+    z-index: 1;
+    background-color: rgba(0,0,0,0.789);
+  }
+
+  #book_form_wrapper {
+    width: 35%;
+    box-shadow: -2px 1px 10px rgba(0,0,0,0.87777);
+    border-radius: 2px;
+    border: 1px solid rgba(255,0,0,0.5777);
+    padding: 20px;
+    margin-top: 80px;
+    position: fixed;
+    z-index: 1000;
+    right: 50px;
+    cursor: pointer;
+  }
+
+  #book_form_wrapper:hover form {
+    background-color: #aaa;
+    transition: 0.4s all;
+  }
+
+  #book_form_wrapper:hover form label i {
+    background-color: #555;
+    color: #111;
+    border: 1px solid #333;
+    padding: 10px 10px 9px 10px;
+  }
+
+  #book_form_wrapper:hover form input[type=text]{
+    border: 1px solid #777;
+  }
+
+  #book_form_wrapper:hover form input[type=date] {
+    border: 1px solid #777;
+  }
+
+  #book_form_wrapper:hover form input[type=time] {
+    border: 1px solid #777;
+  }
+
+  i#form_book_close_btn {
+    font-size: 40px;
+    color: #fff;
+    background-color: rgba(255,10,0, 0.2777);
+    padding: 10px 15px;
+    border-radius: 100px;
+    position: relative;
+    top: 80px;
+    cursor: pointer;
+  }
+
+  #book_form_wrapper form {
+    background-color: #0009;
+    border-radius: 2px;
+    padding: 10px;
+    text-align: center;
+  }
+
+  #book_form_wrapper form p {
+    font-size: 11px;
+    color: #f008;
+  }
+  
+
+  #form_choose_car {
+    background-color: #fff;
+    padding: 5px;
+    margin-top: -17px;
+    position: relative;
+    z-index: 20;
+    border-radius: 3px;
+    display: none;
+  }
+
+
+  #form_choose_car label.car_type_container {
+    background-color: #ccc;
+    border-radius: 3px;
+    border-bottom: 1px solid #eee;
+    display: block;
+    position: relative;
+    padding: 5px;
+    position: relative;
+    cursor: pointer;
+  }
+
+  #form_choose_car .car_type_container input[type=radio] {
+    opacity: 0;
+    position: relative;
+    margin-right: 10px;
+  }
+
+  #form_choose_car .car_check_btn {
+    background-color: #222;
+    height: 17px;
+    width: 17px;
+    border-radius: 100px;
+    position: relative;
+    bottom: 18px;
+    display: none;
+  }
+
+  #form_choose_car .car_type_container:hover .car_check_btn {
+    background-color: red;
+  }
+
+  #form_choose_car .car_check_btn::after {
+    content: "";
+    display: block;
+    background-color: #fff;
+    border-radius: 100px;
+    height: 13px;
+    width: 13px;
+    position: relative;
+    right: 3px;
+    left: 2px;
+    top: 2px;
+  }
+
+   #form_choose_car .car_type_container input[type=radio]:checked ~ .car_check_btn {
+    background-color: red;
+   }
+
+   #form_choose_car .car_type_container input[type=radio]:checked ~ .car_check_btn::after {
+    background-color: red;
+    border: 2px solid #fff;
+   }
+
+  #book_form_wrapper form label {
+     font-size: 14px;
+     color: #222;
+  }
+
+  #book_form_wrapper form label i {
+    background-color: #000;
+    font-size: 15px;
+    position: absolute;
+    z-index: 1;
+    padding: 9px 12px 10px 10px;
+    border: 1px solid #f00;
+    border-radius: 2px;
+    color: #eee;
+  }
+
+  #book_form_wrapper form ul {
+    background-color: #fff;
+    opacity: 0.7555;
+    color: #888;
+    padding: 7px;
+    border: 1px solid #888;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+
+  #book_form_wrapper form ul li {
+    list-style-type: none;
+    color: #444;
+    font-size: 15px;
+  }
+
+  #book_form_wrapper form ul li i {
+    color: #444;
+    padding: 4px;
+    font-size: 15px;
+    position: absolute;
+    right: 46px;
+  }
+
+  #book_form_wrapper form input[type=text] {
+    background-color: #fff;
+    opacity: 0.7555;
+    padding: 7px 10px 9px 42px;
+    border: 1px solid #ccc;
+    border-radius: 0px 2px 2px 0px;
+    font-size: 15px;
+  }
+
+
+  #book_form_wrapper form input[type=text]#pl,#book_form_wrapper form input[type=text]#pd {
+    width: 80%;
+  }
+
+  #book_form_wrapper form input[type=text]:focus {
+    border: 1px solid red;
+  }
+
+  #book_form_wrapper form input[type=date] {
+    margin-right: 6px;
+  }
+
+  #book_form_wrapper form input[type=date],#book_form_wrapper form input[type=time] {
+    width: 39%;
+    opacity: 0.7555;
+    padding: 8px 1px 8px 40px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 1px;
+    font-size: 15px;
+    color: #777;
+    font-family: sans-serif;
+  }
+
+
+  #book_form_wrapper form input[type=submit] {
+    background-color: rgba(255,0,0,0.3777);
+    padding: 7px 10px;
+    color: #ccc;
+    font-size: 15px;
+    font-family: sans-serif;
+    border: 1px solid #ee98ff;
+    border-radius: 3px;
+    margin-top: 5px;
+    width: 100%;
+    cursor: pointer;
+  }
+
+  #book_form_wrapper:hover form input[type=submit] {
+    background-color: #000;
+    color: #fff;
+  }
+  
+/*###### Carousel ##############*/
+
+
+.mySlides {
+  display: none
+}
+
+.mySlides img {
+  width: 100%;
+  height: 100vh;
+}
+
+
+/*====== Search form =========*/
+
+.search_form_wrapper {
+  padding: 10px;
+  position: absolute;
+  top: 400px;
+  right: 0px;
+  left: 0px;
+
+}
+
+.form_content {
+  text-align: center;
+}
+
+.form_content ul {
+  background-color: rgba(0,0,0,0.2);
+  padding: 10px;
+}
+
+.form_content li {
+  list-style-type: none;
+  display: inline-block;
+}
+
+.form_content i {
+  margin-left: 10px;
+}
+
+.form_content input[type=submit] {
+  background-color: red;
+  color: #fff;
+  padding: 10px;
+  width: 200px;
+  margin-left: 20px;
+  border-radius: 3px;
+  border: none;
+  cursor: pointer;
+}
+
+.form_content input[type=submit]:hover {
+  opacity: 0.6777;
+}
+
+.form_content #btn_brand, #btn_type, #btn_price {
+  background-color: #fff;
+  color: #333;
+  font-size: 12px;
+  border: none;
+  padding: 10px;
+  border-radius: 3px;
+  margin-left: 10px;
+  width: 200px;
+  cursor: pointer;
+
+}
+
+.car_any_brand, .car_any_type, .car_price_h_l {
+  background-color: #fff;
+  border: 1px solid #999;
+  border-radius: 3px;
+  margin-top: 20px;
+  padding: 20px;
+  display: none;
+  position: absolute;
+  z-index: 20px;
+}
+
+.car_any_brand {
+  right: 160px;
+}
+
+.car_any_type {
+  left: 370px;
+}
+
+.car_price_h_l {
+  right: 370px;
+}
+
+.form_content span.tip {
+  background-color: transparent;
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  border: 10px solid #fff;
+}
+
+.form_content span.tip_up1 {
+  top: -20px;
+  left: 85px;
+}
+
+.form_content span.tip_up2 {
+  top: -20px;
+  left: 100px;
+}
+
+.form_content span.tip_up3 {
+  top: -20px;
+  right: 90px;
+}
+
+.form_content span.tip_up1, .form_content span.tip_up2, .form_content span.tip_up3 {
+  border-right-color: transparent;
+  border-left-color: transparent;
+  border-top-color: transparent;
+}
+
+.form_content label.btn_container {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 14px;
+  color: #222;
+  padding: 10px;
+  margin-left: 5px;
+}
+
+.form_content input[type=radio] {
+  display: none;
+  position: absolute;
+  left: 15px;
+}
+
+
+.form_content .check {
+  position: relative;
+  right: 20px;
+  bottom: 18px;
+  height: 15px;
+  width: 15px;
+  background-color: #111;
+  border-radius: 100px;
+}
+
+.form_content .check::after {
+  content: "";
+  display: block;
+  background-color: #fff;
+  border-radius: 100px;
+  height: 13px;
+  width: 13px;
+  position: relative;
+  top: 1px;
+  left: 1px;
+}
+
+.form_content label.btn_container:hover .check {
+  background-color: red;
+  transition: all 0.25s linear;
+}
+
+.form_content input[type=radio]:checked ~ .check {
+  background-color: #ff0000;
+}
+
+.form_content input[type=radio]:checked ~ .check::after {
+  background-color: #ff0000;
+  border: 2px solid #fff;
+  transition: background-color 0.45s ease-in-out;
+}
+
+.form_content b {
+  font-size: 15px;
+  color: #222;
+}
+
+.form_content input[type=text] {
+  border: 1px solid #989898;
+  border-radius: 3px;
+  padding: 8px;
+  width: 18%;
+  margin-left: 2px;
+}
+
+.form_content input[type=text]:focus {
+  border: 1px solid red;
+}
+
+
+/*=========== Carousel ========*/
+section#carousel_content {
+  background-color: #222;
+  height: 691px;
+  overflow: hidden;
+  padding-bottom: 20px;
+}
+
+.slides-cover img {
+  vertical-align: middle;
+  /*min-width: 60vw;
+  min-height: 115vh;*/
+  max-width: 100vmax;
+  min-height: 100vmin;
+  /*height: 799px;*/
+  /*margin-top: -60px;*/
+  /*opacity: 0.4555555;*/
+}
+
+/* Slideshow container */
+/*.slideshow-container {
+  position: relative;
+  margin: auto;
+}*/
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 320px;
+  width: auto;
+  padding: 25px;
+  /*margin-top: -22px;*/
+  color: #f3f3f3;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  background-color: rgba(0,0,0,0.5);
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 1px;
+  width: 100%;
+  height: 99%;
+  overflow: hidden;
+  /*margin-bottom: -8px;*/
+  /*height: 800px;*/
+}
+
+.tex_content {
+  /*background-color: #ff8200;*/
+  text-align: center;
+  margin-top: 250px;
+  padding: 20px;
+  border-radius: 3px 5px 50px 3px;
+}
+
+/* The dots/bullets/indicators */
+
+.dot_wrapper {
+  /*background-color: white;*/
+  position: relative;
+  bottom: 100px;
+}
+.dot-container {
+  /*background-color: yellow;*/
+  /*position: relative;*/
+  padding: 10px;
+  /*margin-top: -100px;*/
+}
+.dot {
+  cursor: pointer;
+  height: 3px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  /*border-radius: 50%;*/
+  border-radius: 3px;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {
+    font-size: 11px;
+  }
+}
+
+/*==============================================*/
+
+.how_it_works_header {
+  background-color: #444;
+  padding: 5px;
+}
+
+.how_it_works_header p {
+  font-size: 13px;
+  color: #111;
+}
+
+.how_content_wrapper {
+  background-color: #444;
+  padding: 5px;
+}
+
+.how_content {
+  text-align: center;
+  background-color: #444;
+  padding: 5px;
+  border-radius: 3px;
+  border: 1px solid rgba(0,0,0,0.0899);
+}
+
+.how_content i {
+  background-color: rgba(0,0,0,0.1777);
+  font-size: 14px;
+  padding: 10px;
+  border: 1px solid rgba(0,0,0,0.08777);
+  border-radius: 100%;
+  color: #777;
+}
+
+.how_content p {
+  font-size: 13px;
+  color: #666;
+}
+/*=========== Car Make ==============*/
+section#car_wrapper {
+  background-color: #f4f4f4;
+  border-radius: 3px;
+  border: 1px solid rgba(0,0,0,0.0877);
+  padding: 10px;
+}
+
+.car_make_header {
+	padding: 30px;
+	text-align: center;
+}
+
+.car_make_wrapper {
+  background-color: #9991;
+  border-radius: 2px;
+  border: 1px solid #9993;
+  max-width: 100%;
+  float: left;
+  overflow: hidden;
+  padding: 1px;
+  text-align: center;
+}
+
+.car_make_container {
+  /*background-color: #aaa9;*/
+  padding: 5px;
+  float: left;
+  width: 100%;
+  overflow: hidden;
+  /*transition: margin 1s ease;*/
+  margin: auto 15px;
+}
+
+.car_make {
+  /*background-color: yellow;*/
+  background-color: rgba(0,0,0,0.0977);
+  border-radius: 3px;
+  border: 1px solid #9993;
+  padding: 5px;
+  height: 145px;
+  float: left;
+  margin: 5px;
+}
+
+.car_make a {
+  text-decoration: none;
+}
+
+.car_make p {
+  background-color: rgba(0,0,0,0.3455);
+  font-size: 13px;
+  color: #f3f3f3;
+  padding: 9px;
+  border-radius: 0px 0px 3px 3px;
+  margin-top: -1px;
+}
+
+.car_make_img {
+  /*background-color: blue;*/
+  background-color: rgba(0,0,0,0.05);
+  border: 1px solid rgba(0,0,0,0.0355);
+  box-shadow: 1px 1px 5px 3px rgba(0,0,0,0.04155);
+  border-radius: 3px 3px 0px 0px;
+  width: 190px;
+  height: 100px;
+  overflow: hidden;
+}
+
+.car_make_img img {
+  min-width: 1vmin;
+  max-height: 5vmax;
+  opacity: 0.944;
+  margin: 15px auto;
+}
+
+a.car_make_btn {
+  background-color: #f6f2;
+  display: inline-grid;
+  padding: 10px;
+  margin: 10px 0px;
+  color: #009dff;
+  border: 1px solid rgba(0,155,255,0.3877);
+  border-radius: 2px;
+  text-align: center;
+  width: 300px;
+  position: relative;
+  left: 400px;
+}
+
+/*===========================================*/
+/*// More cars //*/
+
+.more_cars_wrapper {
+  background-color: #9938;
+  float: left;
+  overflow: hidden;
+  width: 100%;
+  padding: 10px 0px;
+  margin: 5px auto;
+  border-radius: 2px;
+  border: 1px solid #8887;
+}
+
+.more_cars_container {
+  background-color: #9931;
+  float: left;
+  overflow: hidden;
+  width: 100%;
+  padding-left: 50px;
+  margin: 5px auto;
+  border: 1px solid #9932;
+}
+
+.more_cars_card {
+  background-color: yellow;
+  width: 225px;
+  height: 255px;
+  /*padding: 2px;*/
+  float: left;
+  overflow: hidden;
+  border: 1px solid #3339;
+  /*text-align: center;*/
+  margin: 10px;
+  border-radius: 3px;
+}
+
+.more_cars_card a {
+  text-decoration: none;
+}
+
+.more_cars_card p#car_card_name {
+  font-size: 13px;
+  color: #0009;
+  padding: 2px;
+  margin: 5px auto;
+}
+
+.more_cars_img {
+  background-color: #6669;
+  padding: 2px;
+  height: 125px;
+  overflow: hidden;
+  text-align: center;
+  margin: auto;
+}
+
+.more_cars_img img {
+  min-width: 4vmin;
+  max-height: 6vmax;
+  margin: 20px auto;
+}
+
+.more_cars_card_nav {
+  background-color: yellow;
+  padding: 5px;
+}
+
+.more_cars_card_nav p {
+  display: inline-block;
+  font-size: 12px;
+  margin: auto 2px;
+}
+
+.more_cars_card_nav img {
+  width: 14px;
+}
+
+.more_cars_btns {
+  margin-top: 7px;
+}
+
+.more_cars_btns a {
+  display: block;
+  color: #0009;
+  font-size: 13px;
+  text-align: center;
+  text-decoration: underline;
+  background-color: #7772;
+  padding: 3px;
+  margin: 3px auto;
+}
+
+.more_cars_btns a#more_car_book {
+  background-color: #005fff;
+  color: #fff;
+  font-size: 14px;
+  text-decoration: none;
+  border-radius: 2px;
+  border: 1px solid #0082ff;
+  padding: 5px;
+  margin: 5px;
+}
+
+a.more_car_view_btn {
+  background-color: #6667;
+  padding: 8px 10px;
+  margin: 10px 0px 5px 430px;
+  width: 230px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 2px;
+  border: 1px solid #6668;  
+}
+/*===============================================*/
+
+section#card_wrapper {
+	background-image: url(../img/drive2.jpg);
+	background-size: 100%;
+	background-attachment: fixed;
+}
+
+.card_bg {
+	background-color: rgba(0,0,0,0.8);
+	padding: 10px;
+}
+
+.card_header {
+	padding: 40px;
+	text-align: center;
+}
+
+.card_header h3 {
+	color: #eee;
+}
+
+.card_header p {
+	color: #eee;
+}
+
+.card {
+    background-color: #fff;
+    box-shadow: 1px 1px 20px 1px #333;
+    float: left;
+    border-radius: 14px;
+    margin-left: 20px;
+    height: 415px;
+    width: 305px;
+  }
+
+  .card_img {
+    background-color: #888;
+    border-radius: 12px 12px 0px 0px;
+    height: 26.355vh;
+    width: 305px;
+    overflow: hidden;
+  }
+
+  .card_img img {
+    min-height: 27vh;
+    max-width: 23vw;
+  }
+
+  .card_content {
+    background-color: rgba(0,0,0,0.0687);
+    padding: 5px 6px 15px 6px;
+    border-radius: 0px 0px 3px 3px;
+    border-top: 1px solid rgba(0,0,0,0.0387);
+  }
+
+  .card_content a {
+    text-decoration: none;
+  }
+
+  .card_content p#card_price {
+    font-size: 25px;
+    padding: 12px 0px;
+    border: 1px solid rgba(255,10,0,0.0388);
+    /*line-height: 0.1;*/
+    margin-top: -1px;
+    color: #222;
+    background-color: rgba(255,10,0,0.0388);
+  }
+
+  .card_content small {
+    font-size: 16px;
+    color: #555;
+  }
+
+  .card_content_header {
+    padding: 1px 0px;
+    line-height: 0.1;
+  }
+
+  .card_content_header h3 {
+    font-size: 14px;
+    color: #222;
+    font-weight: 400;
+  }
+
+  .card_content_header h5 {
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+    line-height: 0.1;
+  }
+
+  .card_content_header p {
+    float: right;
+    margin-right: 5px;
+    font-size: 13px;
+    text-decoration: underline;
+  }
+
+  .card_content_header img {
+    width: 20px;
+    opacity: 0.6;
+  }
+
+   .card_content_detail {
+    background-color: rgba(255,10,0,0.057);
+    border: 1px solid rgba(255,10,0,0.0388);
+    border-radius: 4px;
+    padding: 10px;
+    margin-top: -15px;
+  }
+
+  .card_content_detail p {
+    display: inline-block;
+    line-height: 0.1;
+    font-size: 11px;
+    margin-right: 10px;
+  }
+
+  .card_content_detail img {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    margin-bottom: -2px;
+  }
+
+  a.card_book_now {
+    background-color: rgba(255,0,0,0.975);
+    color: #f1f1f1;
+    display: block;
+    padding: 9px;
+    margin-top: -18px;
+    border-radius: 3px;
+    border: 1px solid rgba(0,0,0,0.298);
+    box-shadow: 1px 1px 3px #555;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.288);
+    font-size: 15px;
+    width: 100%;
+  }
+
+  a.card_book_now:hover {
+    background-color: #000;
+    border: 2px solid #fff;
+    border-radius: 0px;
+    padding: 8px;
+  }
+
+  a.card_view_btn {
+    background-color: #0096ff;
+    display: block;
+    text-align: center;
+    width: 300px;
+    margin: 30px 510px;
+    padding: 10px;
+    color: #fff;
+    border-radius: 3px;
+    border: 1px solid #fff;
+  }
+
+   /*=============================================*/
+
+  .flexable {
+    background-color: #444;
+    margin: 5px 0px;
+    border-radius: 3px;
+    border: 1px solid rgba(0,0,0,0.7777);
+    height: 138px;
+  }
+
+  .flexable_header, .flexable_img {
+    height: 138px;
+    float: right;
+  }
+
+  .flexable_header {
+    width: 840px;
+    padding: 0px 20px;
+    margin-right: 71px;
+  }
+
+  .flexable_header p {
+    font-size: 13px;
+    color: #111;
+  }
+
+  .flexable_img img {
+    display: block;
+    border-radius: 3px;
+    position: relative;
+    max-width: 100vmax;
+    max-height: 10vmax;
+  }
+
+  /*=============================================*/
+  /*  section#rent_car {
+    background-color: #989898;
+  }*/
+
+  /*.rent_car_wrapper {
+    background-color: #fff;
+    padding: 10px;
+  }*/
+
+  .rent_car_content_wrapper {
+    background-color: #555;
+    padding: 5px;
+    border: 1px solid #444;
+    border-radius: 2px;
+  }
+
+  .rent_car_header {
+    padding: 20px;
+    /*text-align: center;*/
+  }
+
+  .rent_car_header h1 {
+    font-size: 18px;
+    color: #111;
+  }
+
+  .rent_car_content {
+    padding: 10px;
+    text-align: center;
+  }
+
+  .rent_car_content i {
+    font-size: 20px;
+    color: #222;
+    background-color: #888;
+    box-shadow: 1px -1px 10px rgba(0,0,0,0.086);
+    padding: 10px;
+    border-radius: 100px;
+  }
+
+  .rent_car_content p {
+    font-size: 13px;
+    color: #222;
+  }
+
+  .why_rent_car {
+    background-color: rgba(0,0,0,0.0677);
+    padding: 10px;
+    border-radius: 3px;
+    box-shadow: 1px -1px 3px rgba(0,0,0,0.0455);
+    border: 1px solid rgba(0,0,0,0.037);
+  }
+
+  /*======================================*/
+  
+  /*section#browse_cars {
+    background-color: lavender;
+  }*/
+
+  /*.browse_cars_wrapper {
+    background-color: #fff;
+    padding: 10px;
+  }*/
+
+  .browse_cars_header {
+    background-color: #555;
+    padding: 10px;
+    margin: 5px 0px;
+  }
+
+  .browse_cars_header h4 {
+    font-size: 17px;
+  }
+
+  .browse_cars_header p {
+    font-size: 13px;
+    color: #333;
+  }
+
+  .browse_car_nav {
+    /*background-color: yellow;*/
+    padding: 1px;
+  }
+
+  .browse_car_nav ul {
+    /*background-color: #4646;*/
+    padding: 15px;
+    margin-left: -16px;
+  }
+
+  .browse_car_nav ul li {
+    background-color: #555;
+    display: inline-block;
+    text-align: center;
+    padding: 10px;
+    margin-right: 10px;
+    width: 200px;
+    border-radius: 2px;
+    cursor: pointer;
+  }
+
+  .browse_cars_content {
+    background-color: #555;
+    padding: 15px;
+    margin-top: -32px;
+    position: relative;
+    /*z-index: 1;*/
+  }
+
+  .browse_cars_content a {
+    text-decoration: none;
+    display: block;
+    font-size: 15px;
+    color: #333;
+    border: 1px solid #aaa;
+    border-radius: 20px;
+    padding: 10px;
+  }
+
+  .browse_cars_content #carbody_content img {
+    width: 100px;
+    margin-right: 20px;  
+    margin-bottom: -10px;
+  }
+
+  .browse_cars_content #carbody_content, #review_content {
+    display: none;
+  }
+  /*================================================*/
+
+  section#all_brands_icons {
+    background-color: lavender;
+  }
+
+  .all_brands_wrapper {
+    /*background-color: #464646;*/
+    padding: 10px;
+  }
+
+  .all_brands_header {
+    padding: 10px;
+  }
+
+  .all_brands_content {
+    background-color: rgba(0,0,0,0.59777);
+    padding: 10px;
+    border: 1px solid rgba(0,0,0,0.009777);
+    border-radius: 1px;
+  }
+
+  .all_brands_content ul {
+    /*background-color: yellow;*/
+    padding: 5px;
+  }
+
+  .all_brands_content ul li {
+    /*background-color: rgba(0,0,0,0.29777);*/
+    border: 1px solid rgba(0,0,0,0.089777);
+    border-radius: 2px;
+    /*float: left;*/
+    margin-left: 2px;
+    margin-bottom: 2px;
+    padding: 5px;
+    list-style-type: none;
+    text-align: center;
+    display: ruby-base;
+    height: 120px;
+    /*max-height: 9vmax;*/
+    /*max-width: 10vmax;*/
+    width: 125px;
+  }
+
+  .all_brands_content ul li a {
+    text-decoration: none;
+    font-size: 13px;
+    color: #222;
+    display: block;
+    margin: 15px;
+  }
+
+  .all_brands_content ul li a span {
+    display: block;
+    margin-top: 10px;
+    /*background-color: blue;*/
+    /*margin: 20px auto;*/
+  }
+
+
+  .all_brands_content img {
+    /*width: 120px;*/
+    max-width: 7vmax;
+    /*height: 150px;*/
+    max-height: 3vmax;
+    /*background-color: #333;*/
+    display: block;
+    margin: auto;
+    padding: 1px;
+  }
+  /*========================================*/
+
+  section#customer_support {
+    /*background-color: #222;*/
+  }
+
+  .customer_support_wrapper {
+    /*background-color: #2626;*/
+    padding: 10px 122px;
+  }
+
+  .customer_support_content {
+    padding: 1px;
+    background-color: #fff;
+    border-radius: 2px;
+    border: 1px solid rgba(0,0,0,0.1877);
+  }
+
+  .customer_support_content a {
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    background-color: #262;
+    color: #fff;
+    padding: 10px;
+    border: 1px solid #363;
+    border-radius: 3px;
+  }
+
+  .customer_support_content a:hover {
+    opacity: 0.8;
+  }
+
+  .customer_support_content img {
+   max-width: 39vmax;
+   max-height: 30vmax;
+   border-radius: 3px;
+  }
+
+  .customer_support_header {
+    /*background-color: #3636;*/
+    padding: 1px 10px;
+  }
+  /*========================================*/
+
+  section#contact {
+    background-image: url(../img/mandona.jpg);
+    background-size: 100%;
+    background-attachment: fixed;
+    background-position: right;
+  	/*padding: 10px;*/
+  }
+
+  .contact_wrapper {
+  	background-color: rgba(0,0,0,0.522);
+  	padding: 10px;
+  }
+
+  .contact_bg {
+    background-color: rgba(0,0,0,0.288);
+    border-radius: 4px;
+  }
+
+  .contact_header {
+  	/*background-color: yellow;*/
+  	padding: 20px;
+  	text-align: center;
+  }
+
+  .contact_header h4 {
+  	font-size: 26px;
+    color: #eee;
+  }
+
+  .contact_header p {
+    font-size: 15px;
+    color: #ddd;
+  }
+
+  .contact_wrapper form {
+  	background-color: rgba(0,0,0,0.08);
+    border-radius: 1000px 210px;
+    box-shadow: 1px 3px 12px rgba(0,0,0,0.566);
+  	padding: 10px;
+  	text-align: center;
+  }
+
+  .contact_wrapper form input[type=text] {
+  	width: 40%;
+  	padding: 10px;
+  	border: 1px solid rgba(0,0,0,0.187);
+  	border-radius: 2px;
+  	font-size: 15px;
+    background-color: #fff;
+    opacity: 0.366;
+    color: #333;
+  }
+
+  .contact_wrapper form input[type=text]:focus {
+    border: 1px solid rgba(255,10,0,0.987);
+    opacity: 1;
+  }
+
+  .contact_wrapper form textarea {
+  	width: 40%;
+    background: #fff;
+    opacity: 0.366;
+    color: #333;
+  	height: 150px;
+  	border: 1px solid rgba(0,0,0,0.187);
+  	border-radius: 3px;
+  	padding: 10px;
+  	font-size: 14px;
+  	font-family: sans-serif;
+  	text-align: left;
+  	margin-left: 50px;
+  }
+
+  .contact_wrapper form textarea:focus {
+    border: 1px solid rgba(255,10,0,0.987);
+    opacity: 1;
+  }
+
+  .contact_wrapper form input[type=submit] {
+     background-color: rgba(0,150,255,0.844);
+     border: 1px solid rgba(0,155,255,0.744);
+     cursor: pointer;
+     padding: 10px;
+     border-radius: 3px;
+     width: 40%;
+     margin-left: 50px;
+     color: #fff;
+     font-size: 15px;
+  }
+
+  .contact_wrapper form input[type=submit]:hover {
+    background-color: rgba(0,195,255,0.687);
+    transition: ease all 1s;
+  }
+
+  footer#footer {
+    background-image: url(../img/drive2b.jpg);
+    background-attachment: fixed;
+    background-size: 100%;
+    background-position: top;
+  }
+
+  .footer_wrapper {
+  	background-color: rgba(0,0,0,0.8888);
+  	padding: 10px 0px 0px 0px;
+  }
+
+  .footer_header {
+  	padding: 10px;
+  	border-bottom: 2px solid rgba(255,20,0,0.455);
+  }
+
+  .footer_header h1 {
+    color: #fff;
+  }
+
+  .footer_content {
+  	/*background-color: yellow;*/
+  	padding: 10px;
+  }
+
+  .footer_content h4 {
+  	font-size: 17px;
+    color: #989898;
+  }
+
+  .footer_content ul {
+  	/*background-color: #fff;*/
+  	padding: 5px;
+  }
+
+  .footer_content li {
+  	list-style-type: none;
+  	font-size: 14px;
+  	padding: 5px;
+    color: #989898;
+  }
+
+  .footer_about {
+  	/*background-color: #fff;*/
+  	padding: 10px;
+  }
+
+  .footer_about p {
+    font-size: 14px;
+    color: #989898;
+  }
+
+
+  .footer_contact_us {
+  	font-size: 15px;
+  	/*background-color: green;*/
+  	padding: 5px;
+  }
+
+  .footer_contact_us i {
+  	font-size: 15px;
+    color: #bbb;
+  	/*background-color: green;*/
+  	padding: 10px;
+  	margin-right: 10px;
+  }
+
+  .footer_social {
+  	/*background-color: #fff;*/
+  	padding: 10px;
+  }
+
+  .footer_social i {
+  	font-size: 17px;
+    color: #f4f4f4;
+  	padding: 10px;
+  	margin-right: 10px;
+  	border-radius: 100px;
+  }
+
+  /*social media icon background color*/
+  i#facebook {
+    background-color: rgba(0,70,255,0.8);
+    padding: 10px 15px;
+  }
+
+  i#twitter {
+    background-color: rgba(0,150,255,0.8);
+  }
+
+  i#pinterest {
+    background-color: rgba(255,20,0,0.8);
+  }
+
+  i#instagram {
+    background-color: rgba(100,0,255,0.8);
+  }
+
+  i#youtube {
+    background-color: rgba(255,20,0,0.8);
+  }
+/*=====================================*/
+  
+  .footer_signup {
+    /*background-color: yellow;*/
+    border: 1px solid rgba(0,0,0,0.4688);
+    padding: 10px;
+  }
+
+  .footer_signup p {
+    font-size: 14px;
+    color: #eee;
+  }
+
+  .footer_signup form input[type=text] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 3px;
+    border: 1px solid #aaa;
+    margin: 5px;
+  }
+
+  .footer_signup form input[type=text]:focus {
+    border: 1px solid #ee98ff;
+  }
+
+  .footer_signup form input[type=submit] {
+    background-color: #009aff;
+    color: #eee;
+    width: 140px;
+    border: 1px solid #0093ff;
+    border-radius: 3px;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 10px;
+    margin: 5px;
+  }
+
+  .footer_signup form input[type=submit]:hover {
+    opacity: 0.5;
+  }
+/*==========================================*/
+  .footer_copy {
+    background-color: rgba(0,0,0,0.377);
+    padding: 10px 0px 0px 0px;
+    text-align: center;
+  }
+
+  .footer_copy p {
+    color: #999;
+    font-size: 14px;
+  }
+
+  .footer_other {
+  	background-color: rgba(0,0,0,0.455);
+  	padding: 10px;
+  }
+
+  .footer_other ul {
+  	/*background-color: #fff;*/
+  	/*text-align: center;*/
+  	/*padding: 10px;*/
+  }
+
+  .footer_other li {
+  	list-style-type: none;
+  	display: inline-block;
+  }
+
+  .footer_other li a {
+  	text-decoration: none;
+  	margin-right: 10px;
+  	font-size: 14px;
+    color: #999;
+  }

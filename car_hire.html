@@ -1,0 +1,1311 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Car Hire</title>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="css/fontawesome/css/all.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap-grid.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/car_hire.css">
+</head>
+
+<body> 
+	<nav role="navigation">
+    <div class="row">
+      <div class="col-md-1"></div>
+        <div class="col-md-10">
+	        <ul id="nav-bar">
+             <li><a href="#" id="logo"><span style="color: red;">Car</span>Hire</a></li>
+            <div id="nav-bar-content">
+             <li><a href="#">Home</a></li>
+             <li  id="reservation"><a href="#">Reservations <i class="fas fa-angle-down"></i></a>
+                <ul id="reserv_nav">
+                  <li><a href="#">Book a Vehicle</a></li>
+                  <li><a href="#">Rent a vehicle</a></li>
+                  <li><a href="#">View / modify / cancel a Reservation</a></li>
+                </ul>
+             </li>
+             <li id="vehicles"><a href="#">Vehicles <i class="fas fa-angle-down"></i></a>
+              <ul id="vehicle_nav">
+                <li><a href="#">All Vehicles</a></li>
+                <li><a href="#">Cars</a></li><!-- Cars- is the combination of Sedans, Compact Sedans, Coupes
+                hatchbacks convertibles, wagens -->
+                <li><a href="#">SUVs</a></li>
+                <li><a href="#">Van</a></li>
+                <li><a href="#">Track / Bakkie</a></li>
+              </ul>
+             </li>
+             <li><a href="#">About Us</a></li>
+             <li><a href="#">Customer Support</a></li>
+             <li><a href="#">Contact</a></li>
+             <li><a href="#">FAQ</a></li>
+             <li id="book_btn">Book a Car Now</li>
+           </div>
+	        </ul>
+        </div>
+       <div class="col-md-1"></div>
+    </div>
+  </nav>
+
+<main>
+  <section id="book_form">
+    <div class="row">
+      <div class="col-md-4"></div>
+      <div class="col-md-4">
+        <i class="fas fa-times" id="form_book_close_btn"></i>
+      </div>
+      <div class="col-md-4">
+        <div id="book_form_wrapper">
+        <form>
+              <!-- <label style="display: block;">Car type</label> -->
+            <ul>
+              <li id="choose_car">Select your Car [Brand] <i class="fas fa-angle-down"></i> </li>
+            </ul>
+            <div id="form_choose_car">
+              <label class="car_type_container">
+                 <input type="radio" name="cartype" value="Economy" checked="checked">Audi <i class="fas fa-angle-down"></i>
+                 -Car Models to appear here e.g A16
+                 <div class="car_check_btn"></div>
+            </label>
+              <label class="car_type_container">
+                 <input type="radio" name="cartype" value="Luxury" checked="checked">BMW <i class="fas fa-angle-down"></i>
+                 -BMW 3 Series and more
+                 <div class="car_check_btn"></div>
+            </label>
+              <label class="car_type_container">
+                 <input type="radio" name="cartype" value="Standart" checked="checked">MINI <i class="fas fa-angle-down"></i>
+                 -Cooper, Cooper Convertible, countryman
+                 <div class="car_check_btn"></div>
+            </label>
+            <label class="car_type_container">
+                 <input type="radio" name="cartype" value="Standart" checked="checked">Land Rover <i class="fas fa-angle-down"></i>
+                 -Range Rover Descovery, Range Rover Sport
+                 <div class="car_check_btn"></div>
+            </label>
+           </div>
+
+          <p id="border"></p>
+               <p>Pick Up location </p>
+           <label for="pl"> <!-- Pick Up location -->
+            <i class="fas fa-map-marker-alt"></i><input type="text" name="" placeholder="city, destrict or specific airport" id="pl">
+          </label>
+
+          <p>Pick Up Date and time</p>
+          <label> <!-- Pick Up Date -->
+           <i class="fas fa-calendar"></i><input type="date" name="">
+         </label>
+         
+          <label> <!-- Pick Up Time -->
+          <i class="fas fa-clock"></i><input type="time" name="">
+         </label>
+        
+          <p id="border"></p>
+          <p>Drop off location</p>
+          <label for="pd"> <!-- Drop Off Location -->
+          <i class="fas fa-map-marker-alt"></i><input type="text" name="" placeholder="city, destrict or specific airport" id="pd">
+         </label>
+
+          <p>Drop Off Date and Time</p>
+          <label> <!-- Drop Off Date -->
+          <i class="fas fa-calendar"></i><input type="date" name="">
+        </label>
+        
+          <label> <!-- Drop Off Time -->
+           <i class="fas fa-clock"></i><input type="time" name="">
+         </label>
+         
+          <!-- <p id="border"></p>
+          <label>Name
+          <input type="text" name="">
+         </label> -->
+         <!-- <br />
+          <label>Email
+          <input type="text" name="">
+          </label> -->
+          <p></p>
+          <input type="submit" name="" value="Continue Booking">
+
+          <!--
+          2-CART
+          *form: Product:          Car Booking Fees
+                 price:            $10.00
+                 Quanty:            1
+                 Total:            $10
+                 --------------------------------
+                 Coupon code[input field]     Apply coupon btn
+                          update cart btn [not active until coupon has been added].
+          ---------------------------------------------
+          cart totals[display fields]
+          subtotal:                 $10.00
+          total:                    $10.00
+          Proceed to chechout btn
+          -----------------------------------------------------------------------
+          3-CHECKOUT[another page]
+           -Returning customer? click here to login btn
+           *comment: If you have shopped with us before, please enter your details bellow.
+            if you are a new customer, please proceed to the Billing and Shipping section.
+            *form: Username or email, password, login btn, Remember me[check box], lost your
+            password?
+            ------------------------------------------------
+           -Have a coupon? Click here to enter your code
+           *comment: if you have a coupon code, please it below.
+           *form: coupon code[input field], Apply coupon btn
+
+          1.[attached to the main form above] personal information/Billing details
+           after user click on continue booking
+          first name, last name, age, phone number, email, address, city, country, zip code, 
+          *create an acount[check box].
+          --------
+          Your Order[table]
+          product                  total
+          car booking *1           $10.00
+          subtotal                 $10.00
+          Total                    $10.00
+          ------------------------------
+          payment method[each option with a comment]
+          - Direct bank transfer
+          *comment: make your payments directly into our bank account. please
+          use your Order ID as the payment reference. your order will not be
+          shipped until the funds have cleared in our account
+          -----------------------------------------------------------------
+          -check payments
+          *comment: Please send a check to Store Name, Store Street, Store Town,
+          Store State/Country, Store Postcode.
+          -------------------------------------------------------------------
+          -Cash on delivery
+          *comment: Pay with Cash upon delivery.
+          Book now btn/ place order
+         ------------------------
+          4. CHECKOUT - thank you page [after placing an order]
+          Thank you. Your order has been recieved.
+
+          [slip]
+          ORDER NUMBER           DATE               TOTAL
+          3677                   August 3, 2020     $10.00
+          PAYMENT METHOD:
+          Direct bank transfer
+
+          Order details[table]
+          product                    total
+          Car Booking Fees           $10.00
+          Subtotal:                  $10.00
+          Payment method:            Direct bank transfer
+          Total:                     $10.00
+          -------------------------------------------
+           -->
+        </form>
+
+      </div>
+      </div>
+    </div>
+  </section>
+
+    <section id="carousel_content">
+     <div class="row">
+        <!-- <div class="col-md-1">col</div> -->
+          <div class="col-md-12">
+            <!-- test carousel -->
+            <!-- ================================= -->
+<div class="slides-cover">
+    <div class="mySlides fade">
+         <img src="img/drive.jpg" class="caro_img">
+       <div class="text">
+           <div class="tex_content">
+
+              <h2>Find Best Car and Limousine 1 </h2>
+              <p>From as low as $10 per day with limited time offer discounts</p>
+         </div>
+      </div>
+   </div>
+
+<div class="mySlides fade">
+       <img src="img/drive3a.jpg" class="caro_img">
+     <div class="text">
+         <div class="tex_content">
+
+              <h2>Find Best Car and Limousine 2</h2>
+              <p>From as low as $10 per day with limited time offer discounts</p>
+         </div>
+     </div>
+   </div>
+
+<div class="mySlides fade">
+       <img src="img/drive2b.jpg" class="caro_img">
+     <div class="text">
+        <div class="tex_content">
+    
+              <h2>Find Best Car and Limousine 3</h2>
+              <p>From as low as $10 per day with limited time offer discounts</p>
+        </div>
+     </div>
+ </div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+            <!-- ================= Sub row ================ -->
+<div class="search_form_wrapper">
+   <div class="row">
+          <div class="col-md-1"></div>
+        <div class="col-md-10">
+          <form>
+               <div class="form_content">
+                <ul>
+                  <li id="btn_brand">Any Brand <span id="btn_icon"><i class="fas fa-angle-down"></i></span></li>
+                      <div class="car_any_brand" id="car_brand">
+                       <span class="tip tip_up1"></span>
+                       <label class="btn_container">
+                          <input type="radio" name="brand" value="AnyBrand" checked="checked">Any Brand
+                          <div class="check"></div>
+                        </label>
+                         <label class="btn_container">
+                          <input type="radio" name="brand" value="Audi">Audi
+                          <div class="check"></div>
+                        </label>
+                        <label class="btn_container">
+                          <input type="radio" name="brand" value="BMW">BMW
+                          <div class="check"></div>
+                        </label>
+                        <label class="btn_container">
+                          <input type="radio" name="brand" value="Lexus">Lexus
+                          <div class="check"></div>
+                        </label>
+                        <label class="btn_container">
+                          <input type="radio" name="brand" value="MercedesBenz">Mercedes Benz
+                          <div class="check"></div>
+                        </label>
+                        <label class="btn_container">
+                          <input type="radio" name="brand" value="MINI">MINI
+                          <div class="check"></div>
+                        </label>
+                        <label class="btn_container">
+                          <input type="radio" name="brand" value="Porsche">Porsche
+                          <div class="check"></div>
+                        </label>
+                         <b> Other Brand</b> <input type="text" name="other-brand" placeholder="specify car brand">
+                      </div>
+                
+               
+                 <li id="btn_type">Any Type <i class="fas fa-angle-down"></i></li>
+                      <div class="car_any_type" id="car_type">
+                        <span class="tip tip_up2"></span>
+                        <label class="btn_container">
+                          <input type="radio" name="cartype" value="AnyType" checked="checked"> Any Type
+                          <div class="check"></div>
+                        </label>
+                        <label class="btn_container">
+                          <input type="radio" name="cartype" value="Coupe"> Coupe
+                          <div class="check"></div>
+                        </label>
+                        <label class="btn_container">
+                          <input type="radio" name="cartype" value="Sedan"> Sedan
+                          <div class="check"></div>
+                        </label>
+                        <label class="btn_container">
+                          <input type="radio" name="cartype" value="SUV"> SUV
+                          <div class="check"></div>
+                        </label>
+                        <label class="btn_container">
+                          <input type="radio" name="cartype" value="van"> Van
+                          <div class="check"></div>
+                        </label>
+                        <label class="btn_container">
+                          <input type="radio" name="cartype" value="Hatchback"> Hatchback
+                          <div class="check"></div>
+                        </label>
+                        <label class="btn_container">
+                          <input type="radio" name="cartype" value="truck"> Truck/Bakkie
+                          <div class="check"></div>
+                        </label>
+                      </div>
+                
+                 <li id="btn_price">Price Low to high <i class="fas fa-angle-down"></i>
+                  <i class="fas fa-angle-up"></i></li>
+                  <div class="car_price_h_l" id="car_price">
+                      <span class="tip tip_up3"></span>
+                      <label class="btn_container">
+                        <input type="radio" name="carprice" value="PriceLowToHigh" checked="checked"> Price Low to High
+                        <div class="check"></div>
+                      </label>
+                      <label class="btn_container">
+                        <input type="radio" name="carprice" value="PriceHighToLow"> Price High to Low
+                        <div class="check"></div>
+                      </label>
+                      <label class="btn_container">
+                        <input type="radio" name="carprice" value="SortByModel"> Sort By Model
+                        <div class="check"></div>
+                      </label>
+                      <label class="btn_container">
+                        <input type="radio" name="carprice" value="SortByPopularity"> Sort By Popularity
+                        <div class="check"></div>
+                      </label>
+                      <label class="btn_container">
+                        <input type="radio" name="carprice" value="SortByReview"> Sort By Review
+                        <div class="check"></div>
+                      </label>
+                    </div>
+               
+                      <input type="submit" value="Search" name="">
+                  </ul>
+               </div>
+             </form>
+         </div>
+           <div class="col-md-1"></div>
+      </div>
+    </div>
+<!-- ========================================== -->
+
+          <!-- ======== sub row ============== -->
+          <div class="dot_wrapper">
+              <div class="row">
+                    <div class="col-md-1"></div>
+                        <div class="col-md-10">
+                                <div style="text-align:center" class="dot-container">
+                                    <span class="dot" onclick="currentSlide(1)"></span>
+                                    <span class="dot" onclick="currentSlide(2)"></span>
+                                    <span class="dot" onclick="currentSlide(3)"></span>
+                                </div>
+                         </div>
+                     <div class="col-md-1"></div>
+                 </div> <!-- end sub-row  -->
+              </div>
+           </div>
+        </div>
+       <!-- <div class="col-md-1">col</div> -->
+    </div>
+ </section>
+
+ <section id="how_it_works">
+   <div class="row">
+     <div class="col-md-1"></div>
+     <div class="col-md-10">
+      <div class="how_it_works_header">
+             <h3>How it works</h3>
+             <p>CarHire is the best place to book your car hire. Start your booking process using the Reservation
+             System above or checkout latest car rental offers and promotions that are currently available</p>
+          </div>
+      <div class="how_content_wrapper">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="how_content">
+          <i class="fas fa-car"></i>
+          <p>Select your car type</p>
+        </div>
+        </div>
+        <div class="col-md-4">
+          <div class="how_content">
+          <i class="fas fa-map-marker-alt"></i>
+          <p>Choose location of pick up and drop off</p>
+        </div>
+        </div>
+        <div class="col-md-4">
+          <div class="how_content">
+          <i class="fas fa-clock"></i>
+          <p>Choose pick up time and drop off time</p>
+        </div>
+      </div>
+      </div>
+     </div>
+   </div>
+     <div class="col-md-1"></div>
+   </div>
+ </section>
+
+<section id="car_wrapper">
+   <div class="car_make_bg">
+      <div class="row">
+        <div class="col-md-1">col</div>
+         <div class="col-md-10" style="background-color: #444;">
+             <div class="car_make_header">
+                <h2>Quality cars that make your travel safe, memorable and enjoyable</h2>
+                <p>Book Or Reserve for better offers and deals</p>
+              </div>
+
+              <div class="car_make_wrapper">
+                <div class="car_make_container">
+                <!-- main loop -->
+                 <div class="car_make">
+                   <a href="#">
+                       <div class="car_make_img">
+                          <img src="img/lr1.jpg">
+                       </div>
+                       <p>Land Rover</p>
+                    </a>
+                 </div>
+
+                 <!-- loop 2 -->
+                 <div class="car_make">
+                   <a href="#">
+                       <div class="car_make_img">
+                          <img src="img/drive12.webp">
+                       </div>
+                        <p>BMW</p>
+                    </a>
+                 </div>
+
+                 <!-- loop 3 -->
+                 <div class="car_make">
+                   <a href="#">
+                       <div class="car_make_img">
+                          <img src="img/drive14.jpeg">
+                       </div>
+                        <p>Mercedese Benz</p>
+                    </a>
+                 </div> 
+
+                 <!-- loop 3 -->
+                 <div class="car_make">
+                   <a href="#">
+                       <div class="car_make_img">
+                          <img src="img/Jeep.png">
+                       </div>
+                        <p>Jeep</p>
+                    </a>
+                 </div>
+                 <!-- loop 3 -->
+                 <div class="car_make">
+                   <a href="#">
+                       <div class="car_make_img">
+                          <img src="img/drive13.png">
+                       </div>
+                        <p>Mini</p>
+                    </a>
+                 </div> 
+
+                 <!-- loop 3 -->
+                 <div class="car_make">
+                   <a href="#">
+                       <div class="car_make_img">
+                          <img src="img/Jeep.png">
+                       </div>
+                        <p>Jeep</p>
+                    </a>
+                 </div>
+                 <!-- loop 3 -->
+                 <div class="car_make">
+                   <a href="#">
+                       <div class="car_make_img">
+                          <img src="img/lexus.png">
+                       </div>
+                        <p>Lexus</p>
+                    </a>
+                 </div> 
+
+                 <!-- loop 3 -->
+                 <div class="car_make">
+                   <a href="#">
+                       <div class="car_make_img">
+                          <img src="img/kindpng_r2.png">
+                       </div>
+                        <p>Rolls Royce</p>
+                    </a>
+                 </div>
+
+                  <!-- loop 3 -->
+                 <div class="car_make">
+                   <a href="#">
+                       <div class="car_make_img">
+                          <img src="img/toyota.jpeg">
+                       </div>
+                        <p>Toyota</p>
+                    </a>
+                 </div>
+
+                  <!-- loop 3 -->
+                 <div class="car_make">
+                   <a href="#">
+                       <div class="car_make_img">
+                          <img src="img/kindpng_honda.png">
+                       </div>
+                        <p>Honda</p>
+                    </a>
+                 </div>
+
+               </div>
+              </div>
+
+              <div>
+                   <a href="#"  class="car_make_btn">View all brands</a>
+              </div>
+
+      </div>
+      <div class="col-md-1">col</div>
+    </div>       
+  </div>
+  </section>
+
+  <section>
+    <div class="row">
+      <div class="col-md-1">col</div>
+      <div class="col-md-10">
+         <div>
+            <h3>More Cars for hire</h3>
+            <p>Make your tarvel your memorable</p>
+        </div>
+        <div class="more_cars_wrapper">
+          <div class="more_cars_container">
+            <div class="more_cars_card">
+              <a href="#">
+                 <div class="more_cars_img">
+                    <img src="img/kindpng_lr1.png">
+                 </div>
+                   <p id="car_card_name">Range Rover Sport or similar</p>
+               </a>    
+              <div class="more_cars_card_nav">
+                <p><img src="icon/profile.png"> 3 </p>
+                <p><img src="icon/bag.png"> 3 big&nbsp 2 small </p> 
+                <p><img src="icon/shift_t.png"> mannual </p>
+              </div>
+              <div class="more_cars_btns">
+                <a href="#" id="more_car_book">Book now</a>
+                <a href="#">more details</a>
+              </div>
+            </div>
+            <!-- ============= -->
+             <div class="more_cars_card">
+              <a href="#">
+                 <div class="more_cars_img">
+                    <img src="img/kindpng_honda.png">
+                 </div>
+                   <p id="car_card_name">Honda lave or similar</p>
+               </a>    
+              <div class="more_cars_card_nav">
+                <p><img src="icon/profile.png"> 4 </p>
+                <p><img src="icon/bag.png"> 1 big &nbsp 5 small </p> 
+                <p><img src="icon/shift_t.png"> mannual </p>
+              </div>
+              <div class="more_cars_btns">
+                <a href="#" id="more_car_book">Book now</a>
+                <a href="#">more details</a>
+              </div>
+            </div>
+            <!-- ======================= -->
+             <div class="more_cars_card">
+              <a href="#">
+                 <div class="more_cars_img">
+                    <img src="img/kindpng_r2.png">
+                 </div>
+                   <p id="car_card_name">Rolls Royce or similar</p>
+               </a>    
+              <div class="more_cars_card_nav">
+                <p><img src="icon/profile.png"> 8 </p>
+                <p><img src="icon/bag.png"> 10 big </p> 
+                <p><img src="icon/shift_t.png"> Automatic </p>
+              </div>
+              <div class="more_cars_btns">
+                <a href="#" id="more_car_book">Book now</a>
+                <a href="#">more details</a>
+              </div>
+            </div>
+            <!-- ==================== -->
+             <div class="more_cars_card">
+              <a href="#">
+                 <div class="more_cars_img">
+                    <img src="img/kindpng_lr.png">
+                 </div>
+                   <p id="car_card_name">Audi x600 or similar</p>
+               </a>    
+              <div class="more_cars_card_nav">
+                <p><img src="icon/profile.png"> 4 </p>
+                <p><img src="icon/bag.png"> 5 big&nbsp 7 small </p> 
+                <p><img src="icon/shift_t.png"> Automatic </p>
+              </div>
+              <div class="more_cars_btns">
+                <a href="#" id="more_car_book">Book now</a>
+                <a href="#">more details</a>
+              </div>
+            </div>
+            <!-- =================== -->
+          </div>
+          <div>
+                <a href="#" class="more_car_view_btn">view all cars</a>
+              </div>
+        </div>
+      </div>
+      <div class="col-md-1">col</div>
+    </div>
+  </section>
+
+    <!-- <section id="card_wrapper">
+      <div class="card_bg">
+      <div class="row"> -->
+         <!-- <div class="col-md-1">col</div> -->
+            <!-- <div class="col-md-12">
+            <div class="card_header">
+                  <h3>Hire a Car of your choice now at affordable price </h3>
+                  <p>By Any Brand of your choice</p>
+            </div> -->
+            <!-- main loop of card -->
+            <!-- <div class="card">
+              <a href="#">
+               <div class="card_img">
+                 <img src="img/lr1.jpg">
+               </div>
+             </a>
+               <div class="card_content">
+                    <a href="#">
+                      <div class="card_content_header">
+                        <p><img src="icon/info.png">more info</p>
+                        <h3>Land Rover</h3>
+                        <h5>Range Rover Sport</h5>
+                      </div>
+                    </a>
+
+                  <div class="card_content_detail">
+                    <img src="icon/seat.png"> <p> 4 SEATES</p>
+                    <img src="icon/bag.png"> <p> 2 BAGS</p>
+                    <img src="icon/car.png"> <p> 4 DOORS</p>
+                 </div>
+                  <p id="card_price"><b>$289</b> <small>/day</small></p>
+                  
+                   <a href="#" class="card_book_now">BOOK NOW</a>
+                 
+              </div>
+           </div> -->
+
+            <!-- 2 loop of card -->
+            <!-- <div class="card">
+              <a href="#">
+               <div class="card_img">
+                 <img src="img/drive6.jpeg">
+               </div>
+             </a>
+               <div class="card_content">
+                <a href="#">
+                      <div class="card_content_header">
+                        <p><img src="icon/info.png">more info</p>
+                        <h3>BMW</h3>
+                        <h5>BMW X7</h5>
+                      </div>
+                    </a>
+
+                  <div class="card_content_detail">
+                    <img src="icon/seat.png"> <p> 4 SEATES</p>
+                    <img src="icon/bag.png"> <p> 2 BAGS</p>
+                    <img src="icon/car.png"> <p> 4 DOORS</p>
+                 </div>
+                  <p id="card_price"><b>$109</b> <small>/day</small></p>
+                  
+                   <a href="#" class="card_book_now">BOOK NOW</a>
+              </div>
+           </div> -->
+
+            <!-- 3 loop of card -->
+            <!-- <div class="card">
+              <a href="#">
+               <div class="card_img">
+                 <img src="img/Audi.jpg">
+               </div>
+             </a>
+               <div class="card_content">
+                <a href="#">
+                      <div class="card_content_header">
+                        <p><img src="icon/info.png">more info</p>
+                        <h3>Audi</h3>
+                        <h5>Audi A6 2000</h5>
+                      </div>
+                    </a>
+
+                  <div class="card_content_detail">
+                    <img src="icon/seat.png"> <p> 4 SEATES</p>
+                    <img src="icon/bag.png"> <p> 2 BAGS</p>
+                    <img src="icon/car.png"> <p> 4 DOORS</p>
+                 </div>
+                  <p id="card_price"><b>$146</b> <small>/day</small></p>
+                  
+                   <a href="#" class="card_book_now">BOOK NOW</a>
+              </div>
+           </div> -->
+
+            <!-- 4 loop of card -->
+            <!-- <div class="card">
+              <a href="#">
+               <div class="card_img">
+                 <img src="img/drive8.jpg">
+               </div>
+             </a>
+               <div class="card_content">
+                <a href="#">
+                      <div class="card_content_header">
+                        <p><img src="icon/info.png">more info</p>
+                        <h3>Mercedese Benz</h3>
+                        <h5>Mercedese Benz CLS</h5>
+                      </div>
+                    </a>
+
+                  <div class="card_content_detail">
+                    <img src="icon/seat.png"> <p> 4 SEATES</p>
+                    <img src="icon/bag.png"> <p> 2 BAGS</p>
+                    <img src="icon/car.png"> <p> 4 DOORS</p>
+                 </div>
+                  <p id="card_price"><b>$137</b> <small>/day</small></p>
+                  
+                   <a href="#" class="card_book_now">BOOK NOW</a>
+              </div>
+           </div> 
+         </div> -->
+      <!-- <div class="col-md-1">col</div> -->
+    <!-- </div>
+       <a href="#" class="card_view_btn">View all</a>
+  </div> -->
+<!-- </section> -->
+
+<section>
+  <div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-10">
+      <div class="flexable">
+        <div class="flexable_header">
+           <h4>Flexiable Payment Options</h4>
+           <p>With all the best offers and deal on car rental;<br>We offer options of <b>paying online</b> and paying <b>upon collection</b> of your car</p>
+         </div>
+           <div class="flexable_img">
+           <img src="img/drive2b.jpg">
+         </div>
+        </div>
+    </div>
+    <div class="col-md-1"></div>
+  </div>
+</section>
+
+    <section id="rent_car">
+      <div class="rent_car_wrapper">
+      <div class="row">
+        <div class="col-md-1"></div>
+          <div class="col-md-10">
+            <div class="rent_car_content_wrapper">
+            <div class="rent_car_header">
+             <h1>Why you should Rent a Car from us</h1>
+           </div>
+           <!-- sub row -->
+           <div class="rent_car_content">
+           <div class="row">
+             <div class="col-md-4">
+              <div class="why_rent_car">
+               <i class="fas fa-car"></i>
+               <p>We are have varities of car Brands</p>
+             </div>
+             </div>
+             <div class="col-md-4">
+              <div class="why_rent_car">
+               <i class="fas fa-thumbs-up"></i>
+               <p>Our cars are of excellent quality and confort</p>
+             </div>
+             </div>
+             <div class="col-md-4">
+              <div class="why_rent_car">
+               <i class="fas fa-heart"></i>
+               <p>We offer best services to our customers</p>
+             </div>
+             </div>
+           </div>
+           </div>
+         </div>
+         </div>
+        <div class="col-md-1"></div>
+       </div>
+      </div>
+    </section>
+
+    <section id="browse_cars">
+      <div class="browse_cars_wrapper">
+      <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+          <div class="browse_cars_header">
+          <h4>Browse Cars</h4>
+          <p>choose for easy and quick access</p>
+        </div>
+
+          <div class="browse_car_nav">
+             <ul>
+               <li id="numpsg">Number of passangers</li>
+               <li id="carbody">Car Type</li>
+               <li id="review">Most Reviewed</li>
+             </ul>
+          </div>
+         <div class="browse_cars_content">
+          <div id="numpsg_content">
+            <a href="#"><i class="fas fa-user"></i> 2</a>
+            <a href="#"><i class="fas fa-user"></i> 4</a>
+            <a href="#"><i class="fas fa-user"></i> 5</a>
+            <a href="#"><i class="fas fa-user"></i> 6</a>
+            <a href="#"><i class="fas fa-user"></i> 7</a>
+            <a href="#"><i class="fas fa-user"></i> 8</a>
+          </div>
+          <div id="carbody_content">
+            <a href="#"><img src="icon/coupe_clr.svg"> Coupe</a>
+            <a href="#"><img src="icon/sedan_clr.svg">Sedan</a>
+            <a href="#"><img src="icon/compactsedan_clr.svg">Compact Sedan</a>
+            <a href="#"><img src="icon/suv_clr.svg">SUV</a>
+            <a href="#"><img src="icon/convertible_clr.svg">Convertible</a>
+            <a href="#"><img src="icon/hatchback_clr.svg">Hatchback</a>
+            <a href="#"><img src="icon/truck_clr.svg">Truck / Bakkie</a>
+            <a href="#"><img src="icon/wagon_clr.svg">Wagon</a>
+            <a href="#"><img src="icon/van_clr.svg">Van</a>
+          </div>
+          <div id="review_content">
+            <a href="#">1-2</a>
+            <a href="#">2-3</a>
+            <a href="#">3-4</a>
+            <a href="#">4-5</a>
+          </div>
+        </div>
+        </div>
+        <div class="col-md-1"></div>
+      </div>
+    </div>
+    </section>
+
+    <section id="all_brands_icons">
+      <div class="all_brands_wrapper">
+      <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+          <div class="all_brands_header">
+          <h4>All Brands</h4>
+        </div>
+        <div class="all_brands_content">
+           <ul>
+             <li><a href="#"><img src="icon/kindpng_toyota.png"><span>Toyota</span></a></li>
+             <li><a href="#"><img src="icon/kindpng_audi.png"><span>Audi</span></a></li>
+             <li><a href="#"><img src="icon/kindpng_hyundai.png"><span>Hyundai</span></a></li>
+             <li><a href="#"><img src="icon/kindpng_bmw.png"><span>BMW</span></a></li>
+             <li><a href="#"><img src="icon/kindpng_lexus.png"><span>Lexus</span></a></li>
+             <li><a href="#"><img src="icon/kindpng_landrover.png"><span>Land Rover</span></a></li>
+             <li><a href="#"><img src="icon/kindpng_mitsubishi.png"><span>Mitsubishi</span></a></li>
+             <li><a href="#"><img src="icon/kindpng_jeep.png"><span>Jeep</span></a></li>
+             <li><a href="#"><img src="icon/kindpng_mahindra.png"><span>Mahindra</span></a></li>
+             <li><a href="#"><img src="icon/kindpng_volkswagen.png"><span>Volkswagen</span></a></li>
+             <li><a href="#"><img src="icon/kindpng_volvo.png"><span>Volvo</span></a></li>
+             <li><a href="#"><img src="icon/kindpng_tata.png"><span>Tata</span></a></li>
+             <li><a href="#"><img src="icon/kindpng_honda.png"><span>Honda</span></a></li>
+             <li><a href="#"><img src="icon/kindpng_renault.png"><span>Renault</span></a></li>
+             <li><a href="#"><img src="icon/kindpng_rollsroyce.png"><span>Rolls Royce</span></a></li>
+             <li><a href="#"><img src="icon/kindpng_bugatti.png"><span>Bugatti</span></a></li>
+             <li><a href="#"><img src="icon/kindpng_jaguar.png"><span>Jaguar</span></a></li>
+             <li><a href="#"><img src="icon/kindpng_ferrari.png"><span>Ferrari</span></a></li>
+             <li><a href="#"><img src="icon/kindpng_benz.png"><span>Mercedese Benz</span></a></li>
+             <li><a href="#"><img src="icon/kindpng_mini.png"><span>Mini</span></a></li>
+             <li><a href="#"><img src="icon/kindpng_datsun.png"><span>Datsun</span></a></li>
+             <li><a href="#"><img src="icon/kindpng_fiat.png"><span>Fiat</span></a></li>
+             <li><a href="#"><img src="icon/kindpng_ford.png"><span>Ford</span></a></li>
+             <li><a href="#"><img src="icon/kindpng_isuzu.png"><span>Isuzu</span></a></li>
+             <li><a href="#"><img src="icon/kindpng_suzuki.png"><span>Suzuki</span></a></li>
+             <li><a href="#"><img src="icon/kindpng_kia.png"><span>Kia</span></a></li>
+             <li><a href="#"><img src="icon/kindpng_chevrolet.png"><span>Chevloret</span></a></li>
+           </ul>
+         </div>
+        </div>
+        <div class="col-md-1"></div>
+      </div>
+    </div>
+    </section>
+
+    <section id="customer_support">
+      <div class="customer_support_wrapper">
+        <div class="customer_support_content">
+      <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-5">
+          <div class="customer_support_header">
+          <h4>We are live on WhatsApp</h4>
+          <p>You can interact with us 24/7 if you need help on how to
+          make a Reservation or any thing that needs assistance. By making use of our WhatsApp CarHire
+          support line, you'll get all the car rental help you need, quick and easy! </p>
+          <p>Remember your safe travel is our priority. Get in touch now</p>
+          <a href="#">Start Chatting Now</a>
+        </div>
+        </div>
+        <div class="col-md-5">
+          <img src="img/w1.jpg">
+        </div>
+        <div class="col-md-1"></div>
+      </div>
+    </div>
+    </div>
+    </section>
+
+    <section id="contact">
+      <div class="contact_wrapper">
+      <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+          <div class="contact_bg">
+          <div class="contact_header">
+            <h4>Contact Us</h4>
+            <p><b>Do you have any Question or you need Additional information?</b></p>
+            <p>Address: 234 Street, Zanimuone, Lusaka, Zambia</p>
+            <p>Phone Number : +260979874525</p>
+            <p>OR you can simply write to us</p>
+          </div>
+          <form>
+            <label for="customer_name">Name :
+            <input type="text" name="" id="customer_name" placeholder="Your Name *">
+           </label>
+          
+           <p></p>
+           <label for="email">Email :
+            <input type="text" name="" id="email" placeholder="yourname@mail.com *">
+           </label>
+            <p></p>
+            
+            <textarea  placeholder="Your Message * ..."></textarea>
+            <p></p>
+            <input type="submit" value="Send Message">
+          </form>
+        </div>
+      </div>
+        <div class="col-md-1"></div>
+      </div>
+    </div>
+    </section>
+      <!-- Remember to add Google map location for this company -->
+      <section>
+        <div class="row">
+          <div class="col-md-1"></div>
+          <div class="col-md-10">
+            <h3>MAP</h3>
+            <img src="img/map.jpg" style="width: 100%; height: 500px;">
+          </div>
+          <div class="col-md-1"></div>
+        </div>
+      </section>
+</main>
+
+<footer id="footer">
+  <div class="footer_wrapper">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="footer_header">
+				<h1>CarHire</h1>
+			</div>
+		</div>
+	</div>
+  <div class="footer_content">
+     <div class="row">
+        <div class="col-md-4">
+          <div class="footer_about">
+          <h4>About Us</h4>
+          <p>CarHire is the best Car Rental company that providies best Car Brands in the world. Rent a car
+          online now from our location. Take advantage of our large vehicle rental selection and make your
+          Booking online instantly.</p>
+        </div>
+        </div>
+        <div class="col-md-4">
+          <div class="footer_contact_us">
+          <h4>Contact Info</h4>
+          <ul>
+            <li><i class="fas fa-map-marker-alt"></i> Address : 243 street, Zanimuone , Lusaka, Zambia</li>
+            <li><i class="fas fa-envelope"></i> Email Address : carhire@gmail.com</li>
+            <li><i class="fas fa-mobile"></i> Phone Number : +260979874525</li>
+            <li><i class="fab fa-whatsapp"></i> : +260979874525</li>
+          </ul>
+        </div>
+        </div>
+        <div class="col-md-4">
+          <div class="footer_social">
+          <h4>Social Media</h4>
+          <a href="#"><i class="fab fa-facebook-f" id="facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter" id="twitter"></i></a>
+          <a href="#"><i class="fab fa-pinterest" id="pinterest"></i></a>
+          <a href="#"><i class="fab fa-instagram" id="instagram"></i></a>
+          <a href="#"><i class="fab fa-youtube" id="youtube"></i></a>
+        </div>
+        <div class="footer_signup">
+          <p>Sign up to recieve promotions, deals and travel tips into your mail box.</p>
+          <form>
+            <label>
+              <input type="text" name="" placeholder="name">
+            </label>
+            <label>
+              <input type="text" name="" placeholder="your email address">
+            </label>
+            <input type="submit" value="sign up">
+          </form>
+        </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-md-12">
+        <div class="footer_copy">
+          <p>CarHire &copy 2020 All Rights Reserved Designed and Developed by Sosten Nyirenda</p>
+          <div class="footer_other">
+            <ul>
+              <li><a href="#"> About </a></li>
+              <li><a href="#"> FAQs </a></li>
+              <li><a href="#"> Contact </a></li>
+              <li><a href="#"> Services </a></li>
+              <li><a href="#"> Cars </a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000);
+}
+</script>
+
+<!-- ======== javascript for Search Car Form ========== -->
+<script type="text/javascript">
+  var btnBrand = document.getElementById('btn_brand');
+  var carBrand = document.getElementById('car_brand');
+  let btnType = document.getElementById("btn_type");
+  let carType = document.getElementById("car_type");
+  let btnPrice = document.getElementById("btn_price");
+  let carPrice = document.getElementById("car_price");
+  let btnIcon = document.getElementById('btn_icon');
+
+   btnBrand.onclick = function(){
+     if(carBrand.style.display == "none") {
+         carBrand.style.display = "block";
+         carType.style.display = "none";
+         carPrice.style.display = "none";
+    }
+     
+    else {
+         carBrand.style.display='none';
+  }
+}
+
+btnType.onclick = searchCarType;
+function searchCarType() {
+  if (carType.style.display == "none") {
+      carType.style.display = "block";
+      carBrand.style.display = "none";
+      carPrice.style.display = "none";
+    } 
+
+  else {
+       carType.style.display = "none";
+  }
+}
+
+btnPrice.onclick = searchCarPrice;
+function searchCarPrice() {
+  if (carPrice.style.display == "none") {
+      carPrice.style.display = "block";
+      carBrand.style.display = "none";
+      carType.style.display = "none";
+  }
+
+ else {
+      carPrice.style.display = "none";
+  }
+}
+</script>
+
+<!-- =============  script for Booking Form    ============ -->
+<script type="text/javascript">
+
+  function bookingForm() {
+    let bookCloseBtn = document.getElementById("form_book_close_btn");
+    let bookBtn = document.getElementById("book_btn");
+    let bookForm = document.getElementById("book_form");
+    let caroImage = document.querySelectorAll("img.caro_img");
+
+     bookBtn.onclick = bookNow;
+
+     function bookNow(){
+         if (bookForm.style.display == "none") {
+          bookForm.style.display = "block";
+
+          for (var i = 0; i <= caroImage.length; i++) {
+            caroImage[i].style.filter = "blur(10px)";
+          }
+         } else {
+          bookForm.style.display = "none";
+       }
+  }
+
+
+  bookCloseBtn.onclick = myFunction; //give it a method called myFunction when click event occurs
+  function myFunction() {
+    bookForm.style.display = "none";
+    for (var i = 0; i <= caroImage.length; i++) {
+    caroImage[i].style.filter = "";
+  }
+
+  }
+}
+
+bookingForm();
+
+</script>
+
+<script type="text/javascript">
+  function chooseCarOfChoice() {
+  var ChooseCar = document.getElementById("choose_car");
+  var ChooseCarContent = document.getElementById("form_choose_car");
+
+  ChooseCar.onclick = CarChoice;
+  function CarChoice() {
+    if (ChooseCarContent.style.display == "none") {
+      ChooseCarContent.style.display = "block";
+      ChooseCarContent.style.position = "absolute";
+      ChooseCarContent.style.right = "20px";
+      ChooseCarContent.style.left = "20px";
+    }
+    else{
+      ChooseCarContent.style.display = "none";
+    }
+  }
+}
+chooseCarOfChoice();
+</script>
+
+<!-- ========== script for browse by ========== -->
+<script type="text/javascript">
+  var numPsg = document.getElementById("numpsg");
+  var numPsgContent = document.getElementById("numpsg_content");
+  var carBody = document.getElementById("carbody");
+  var carBodyContent = document.getElementById("carbody_content");
+  var reviewOfcar = document.getElementById("review");
+  var reviewOfcarContent = document.getElementById("review_content");
+
+  numPsg.onclick = browseCarsBy1;
+  function browseCarsBy1(){
+    if (numPsgContent.style.display == "block") {
+        numPsgContent.style.display = "none";
+        carBodyContent.style.display = "none";
+        reviewOfcarContent.style.display = "none";
+    } else {
+      numPsgContent.style.display = "block";
+      carBodyContent.style.display = "none";
+    }
+  }
+
+   carBody.onclick = browseCarsBy2;
+  function browseCarsBy2(){
+    if (carBodyContent.style.display == "none") {
+        carBodyContent.style.display = "block";
+        numPsgContent.style.display = "none";
+        reviewOfcarContent.style.display = "none";
+    } else {
+      carBodyContent.style.display = "none";
+    }
+  }
+
+   reviewOfcar.onclick = browseCarsBy3;
+  function browseCarsBy3(){
+    if (reviewOfcarContent.style.display == "none") {
+        reviewOfcarContent.style.display = "block";
+        carBodyContent.style.display = "none";
+        numPsgContent.style.display = "none";
+    } else {
+      reviewOfcarContent.style.display = "none";
+    }
+  }
+</script>
+<!-- ================================================= -->
+<!-- =============== Script for Car Make ============= -->
+<script type="text/javascript">
+  // const slidesContainer = document.querySelector(".car_make_container");
+  // const slidesContainerWidth = slidesContainer.offsetWidth;
+  // const slides = document.getElementsByClassName("car_make");
+  // const carControl = document.querySelector('.car_control');
+  // const margin = 10;
+  // var items = 0; //from the responsive array
+  // var totalItems = 0;
+  // var jumpSlideWidth = 0;
+
+  // responsive = [
+  //  {breakPoint:{width:0, item:1}},
+  //  {breakPoint:{width:600, item:2}},
+  //  {breakPoint:{width:1000, item:4}}
+  // ];
+ 
+ //get the item from the responsive array of objects
+//  function load() {
+//  for (let i = 0; i < responsive.length; i++) {
+//    if (window.innerWidth > responsive[i].breakPoint.width) {
+//       items = responsive[i].breakPoint.item;
+//    }
+//  }
+//  start();
+// }
+
+ // define the width and margin for each slide
+// function start() {
+//  let totalItemsWidth=0;
+//  for (let i = 0; i < slides.length; i++) {
+//    slides[i].style.width = (slidesContainerWidth/items) - margin + "px";
+//    slides[i].style.margin = (margin/2) + "px";
+//    totalItemsWidth += slidesContainerWidth/items;
+//    totalItems++;
+//  }
+
+ // define the width car_make_container
+ // slidesContainer.style.width = totalItemsWidth + "px";
+
+ // set up slides control i.e next and prev
+
+//  const allSlides = Math.ceil(totalItems/items);
+//  const ul = document.createElement("ul");
+//     for (let i=1; i<=allSlides; i++) {
+//         const li = document.createElement("li");
+//         li.id = i;
+//         li.innerHTML = i;
+//         li.setAttribute("onclick", "controlSlides(this)");
+//         ul.appendChild(li);
+//         if (i==1) {
+//           li.className = "car_active";
+//         }
+//   }
+//   carControl.appendChild(ul);
+// }
+
+ // function controlSlides (ele) {
+ //   const ul = carControl.children;
+ //   const li = ul[0].children;
+ //   var car_active;
+ //   for (let i=0; i<li.length; i++) {
+ //     if (li[i].className=="car_active") {
+ //        car_active = i;
+ //        li[i].className = "";
+ //     }
+    
+ //   }
+
+  //  ele.className = "car_active";
+  //  var numb = (ele.id-1)-car_active;
+  //  jumpSlideWidth = jumpSlideWidth + (slidesContainerWidth*numb);
+  //  slidesContainer.style.marginLeft =- jumpSlideWidth + "px";
+  // }
+
+  // window.onload = load();
+</script>
+</body>
+</html>
