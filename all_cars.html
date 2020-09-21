@@ -47,7 +47,7 @@
   </nav>
 
   <section>
-  	<div class="car_header_wrapper">
+  	<div id="car_header_wrapper">
   	<div class="row">
   		<div class="col-md-12">
   		 <div class="car_header">
@@ -172,7 +172,7 @@
 
   <section>
   	<div class="row">
-  		<div class="col-md-1">col</div>
+  		<div class="col-md-1"></div>
   		<div class="col-md-10">
   		  <div class="row">
   		  	<div class="col-md-5">
@@ -266,7 +266,7 @@
   		    </div>
   		   </div>
   		 </div>
-  		<div class="col-md-1">col</div>
+  		<div class="col-md-1"></div>
   	</div>
   </section>
 
@@ -274,7 +274,20 @@
   	<div class="row">
   		<div class="col-md-1">col</div>
   		<div class="col-md-10">
-  			<p>Browse cars by</p>
+        <div>
+      			<p>Enjoy our cars</p>
+            <h6>Most Reviewed cars</h6>
+            <p>Customer review gives us confidence to serve you with excellence</p>
+        </div>
+
+        <div class="car_carousel_content">
+          <div class="car_carousel">
+            <img src="img/bmw-918408_1920.jpg" id="slider">
+          </div>
+          <button onclick="prev()">prev</button>
+          <button onclick="next()">next</button>
+        </div>
+
   		</div>
   		<div class="col-md-1">col</div>
   	</div>
@@ -284,10 +297,54 @@
   	<div class="row">
   		<div class="col-md-1">col</div>
   		<div class="col-md-10">
-  			<p>all car brands icons</p>
+        <p>We are here to help you</p>
+  			<h1>Talk to us</h1>
+         <img src="img/cw.png">
+         <p>+260777730003</p>
   		</div>
   		<div class="col-md-1">col</div>
   	</div>
   </section>
+
+  <script type="text/javascript">
+    function para() {
+    const parallax = document.getElementById('car_header_wrapper');
+    window.onscroll = function() {
+      let offset = window.pageYOffset;
+      parallax.style.backgroundPositionY = offset * 0.7 + "px";
+    }
+  }
+
+  para();
+
+  </script>
+
+  <!-- ============ Carousel ============== -->
+  <script type="text/javascript">
+    var images = [
+      "img/auto-2179220_1920.jpg",
+      "img/car.jpg",
+      "img/building.jpg",
+    ];
+
+    var num = 0;
+    function next() {
+      var slider = document.getElementById("slider");
+      num++;
+      if (num >= images.length) {
+        num = 0;
+      }
+      slider.src = images[num];
+    }
+
+    function prev() {
+      var slider = document.getElementById("slider");
+      num--;
+      if (num < 0) {
+        num = images.length-1;
+      }
+      slider.src = images[num];
+    }
+  </script>
 </body>
 </html>

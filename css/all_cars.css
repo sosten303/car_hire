@@ -129,14 +129,12 @@ body {
   }
 
 /*================================*/
-
 /*// All Cars //*/
 
-.car_header_wrapper {
+#car_header_wrapper {
 	background-color: #000;
 	background-image: url(../img/building.jpg);
 	background-size: 100%;
-	background-attachment: fixed;
 }
 
 .car_header {
@@ -338,4 +336,25 @@ p#car_name {
 
 .deal img {
 	width: 100%;
+}
+
+/*======================================*/
+/*// Car Carousel //*/
+
+.car_carousel_content {
+	background-color: #0001;
+	padding: 5px;
+}
+
+.car_carousel {
+	background-color: #f005;
+	padding: 10px;
+	text-align: center;
+	height: 450px;
+	overflow: hidden;
+}
+
+.car_carousel img {
+	max-width: 50vmax;
+	max-height: 22vmax;
 }

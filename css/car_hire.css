@@ -632,15 +632,12 @@ section#carousel_content {
 /* The dots/bullets/indicators */
 
 .dot_wrapper {
-  /*background-color: white;*/
   position: relative;
   bottom: 100px;
 }
+
 .dot-container {
-  /*background-color: yellow;*/
-  /*position: relative;*/
   padding: 10px;
-  /*margin-top: -100px;*/
 }
 .dot {
   cursor: pointer;
@@ -648,7 +645,6 @@ section#carousel_content {
   width: 15px;
   margin: 0 2px;
   background-color: #bbb;
-  /*border-radius: 50%;*/
   border-radius: 3px;
   display: inline-block;
   transition: background-color 0.6s ease;
@@ -746,17 +742,14 @@ section#car_wrapper {
 }
 
 .car_make_container {
-  /*background-color: #aaa9;*/
   padding: 5px;
   float: left;
   width: 100%;
   overflow: hidden;
-  /*transition: margin 1s ease;*/
   margin: auto 15px;
 }
 
 .car_make {
-  /*background-color: yellow;*/
   background-color: rgba(0,0,0,0.0977);
   border-radius: 3px;
   border: 1px solid #9993;
@@ -780,7 +773,6 @@ section#car_wrapper {
 }
 
 .car_make_img {
-  /*background-color: blue;*/
   background-color: rgba(0,0,0,0.05);
   border: 1px solid rgba(0,0,0,0.0355);
   box-shadow: 1px 1px 5px 3px rgba(0,0,0,0.04155);
@@ -925,167 +917,6 @@ a.more_car_view_btn {
   border-radius: 2px;
   border: 1px solid #6668;  
 }
-/*===============================================*/
-
-section#card_wrapper {
-	background-image: url(../img/drive2.jpg);
-	background-size: 100%;
-	background-attachment: fixed;
-}
-
-.card_bg {
-	background-color: rgba(0,0,0,0.8);
-	padding: 10px;
-}
-
-.card_header {
-	padding: 40px;
-	text-align: center;
-}
-
-.card_header h3 {
-	color: #eee;
-}
-
-.card_header p {
-	color: #eee;
-}
-
-.card {
-    background-color: #fff;
-    box-shadow: 1px 1px 20px 1px #333;
-    float: left;
-    border-radius: 14px;
-    margin-left: 20px;
-    height: 415px;
-    width: 305px;
-  }
-
-  .card_img {
-    background-color: #888;
-    border-radius: 12px 12px 0px 0px;
-    height: 26.355vh;
-    width: 305px;
-    overflow: hidden;
-  }
-
-  .card_img img {
-    min-height: 27vh;
-    max-width: 23vw;
-  }
-
-  .card_content {
-    background-color: rgba(0,0,0,0.0687);
-    padding: 5px 6px 15px 6px;
-    border-radius: 0px 0px 3px 3px;
-    border-top: 1px solid rgba(0,0,0,0.0387);
-  }
-
-  .card_content a {
-    text-decoration: none;
-  }
-
-  .card_content p#card_price {
-    font-size: 25px;
-    padding: 12px 0px;
-    border: 1px solid rgba(255,10,0,0.0388);
-    /*line-height: 0.1;*/
-    margin-top: -1px;
-    color: #222;
-    background-color: rgba(255,10,0,0.0388);
-  }
-
-  .card_content small {
-    font-size: 16px;
-    color: #555;
-  }
-
-  .card_content_header {
-    padding: 1px 0px;
-    line-height: 0.1;
-  }
-
-  .card_content_header h3 {
-    font-size: 14px;
-    color: #222;
-    font-weight: 400;
-  }
-
-  .card_content_header h5 {
-    font-size: 16px;
-    color: #333;
-    font-weight: 600;
-    line-height: 0.1;
-  }
-
-  .card_content_header p {
-    float: right;
-    margin-right: 5px;
-    font-size: 13px;
-    text-decoration: underline;
-  }
-
-  .card_content_header img {
-    width: 20px;
-    opacity: 0.6;
-  }
-
-   .card_content_detail {
-    background-color: rgba(255,10,0,0.057);
-    border: 1px solid rgba(255,10,0,0.0388);
-    border-radius: 4px;
-    padding: 10px;
-    margin-top: -15px;
-  }
-
-  .card_content_detail p {
-    display: inline-block;
-    line-height: 0.1;
-    font-size: 11px;
-    margin-right: 10px;
-  }
-
-  .card_content_detail img {
-    width: 20px;
-    height: 20px;
-    margin-right: 5px;
-    margin-bottom: -2px;
-  }
-
-  a.card_book_now {
-    background-color: rgba(255,0,0,0.975);
-    color: #f1f1f1;
-    display: block;
-    padding: 9px;
-    margin-top: -18px;
-    border-radius: 3px;
-    border: 1px solid rgba(0,0,0,0.298);
-    box-shadow: 1px 1px 3px #555;
-    text-align: center;
-    text-decoration: none;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.288);
-    font-size: 15px;
-    width: 100%;
-  }
-
-  a.card_book_now:hover {
-    background-color: #000;
-    border: 2px solid #fff;
-    border-radius: 0px;
-    padding: 8px;
-  }
-
-  a.card_view_btn {
-    background-color: #0096ff;
-    display: block;
-    text-align: center;
-    width: 300px;
-    margin: 30px 510px;
-    padding: 10px;
-    color: #fff;
-    border-radius: 3px;
-    border: 1px solid #fff;
-  }
 
    /*=============================================*/
 
