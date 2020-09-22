@@ -346,6 +346,32 @@ p#car_name {
 	padding: 5px;
 }
 
+.car_carousel_header {
+	background-color: #4446;
+	padding: 10px;
+}
+
+.car_carousel_header p,.car_carousel_header h5 ,.car_carousel_header h6 {
+	margin: auto;
+	padding: 5px 0px;
+} 
+
+.car_carousel_header p {
+	font-size: 15px;
+	color: #444;
+}
+
+.car_carousel_header h5 {
+	font-size: 25px;
+	color: #111;
+}
+
+.car_carousel_header h6 {
+	font-size: 15px;
+	font-weight: 200;
+	color: #333;
+}
+
 .car_carousel {
 	background-color: #f005;
 	padding: 10px;
@@ -357,4 +383,44 @@ p#car_name {
 .car_carousel img {
 	max-width: 50vmax;
 	max-height: 22vmax;
+}
+
+.talk {
+	background-color: #9991;
+	padding: 10px;
+}
+
+.talk_header {
+	margin: 65px 0px;
+    text-align: center;
+}
+
+.talk_header h6, .talk_header p {
+	margin: auto;
+	padding: 5px 0px;
+}
+
+.talk_header h6 {
+	font-size: 35px;
+	color: #444;
+}
+
+.talk_header p {
+	font-size: 15px;
+	color: #5558;
+}
+
+.talk_content img {
+	max-height: 35vmax;
+	position: relative;
+	left: 35%;
+}
+
+.talk_content p {
+	font-size: 30px;
+	font-weight: 600;
+	color: #0091ff;
+	text-align: center;
+	margin: 10px auto;
+	padding: 10px 0px;
 }
