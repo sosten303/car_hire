@@ -1,4 +1,4 @@
-/*All Cars Css file*/
+/*All Trucks Css file*/
 body {
   	font-family: sans-serif;
   	background-color: lavender;
@@ -127,27 +127,27 @@ body {
   }
 
 /*================================*/
-/*// All Cars //*/
+/*// All Trucks //*/
 
-#car_header_wrapper {
+#truck_header_wrapper {
 	background-color: #000;
-	background-image: url(../img/building.jpg);
+	background-image: url(../img/toyota_tundra1.jpg);
 	background-size: 100%;
 }
 
-.car_header {
+.truck_header {
 	color: #fff;
 	background-color: #0008;
 	padding: 100px 0px 100px 125px;
 	margin-top: 76px;
 }
 
-.car_header p {
+.truck_header p {
 	font-size: 15px;
 	color: #999;
 }
 
-p#car_book_btn {
+p#truck_book_btn {
 	background-image: linear-gradient(80deg, #ff0000, #ff5500, #ff04);
 	color: #fff;
 	font-size: 17px;
@@ -159,85 +159,27 @@ p#car_book_btn {
 	cursor: pointer;
 }
 
-/*================================*/
-/*// Seach nav //*/
-
-.search_nav {
-	background-color: #8884;
-	padding: 5px;
-	border: 1px solid #8887;
-	border-radius: 2px;
-	margin: 1px auto;
-}
-
-.search_nav ul {
-	/*background-color: #3331;*/
-	padding: 5px;
-	margin: 5px auto;
-}
-
-.search_nav ul li {
-	list-style-type: none;
-	display: inline-block;
-	width: 250px;
-	padding: 8px 13px;
-	border: 1px solid #5553;
-	border-radius: 2px;
-	font-size: 15px;
-	color: #222;
-	cursor: pointer;
-	background-color: #4441;
-	margin: auto;
-}
-
-.search_nav ul li i {
-	position: relative;
-	left: 147px;
-	color: #ff4100;
-	text-shadow: inherit;
-}
-
-span#total_number {
-	background-color: #ff4100;
-	color: #fff;
-	font-size: 13px;
-	padding: 2px 5px;
-	border-radius: 5px;
-	position: relative;
-	left: 130px;
-}
-
-
-/*======================================*/
-/*// all cars //*/
-
-.all_cars_heading {
+.all_truck_heading {
 	background-color: #8884;
 	padding: 10px;
 	border-radius: 2px;
 	border: 1px solid #8887;
 }
 
-.all_cars_heading h1 {
-	color: #111;
-}
-
-.all_cars_heading p {
+.all_truck_heading p {
 	font-size: 14px;
-	color: #555;
 }
 
-.all_cars_wrapper {
+.all_truck_wrapper {
 	background-color: #8884;
 	padding: 10px;
 	border-radius: 2px;
 	border: 1px solid #8887;
 	float: left;
 	width: 100%;
-	margin: 1px auto;
 }
 
-.all_cars_container {
+.all_truck_container {
 	background-color: #5554;
 	padding: 10px 0px 10px 2px;
 	border-radius: 2px;
@@ -246,12 +188,12 @@ span#total_number {
 	width: 100%;
 }
 
-.all_cars_container a {
+.all_truck_container a {
 	text-decoration: none;
 	color: #111;
 }
 
-.all_cars {
+.all_truck {
 	background-color: #3334;
 	padding: 1px;
 	width: 200px;
@@ -262,38 +204,38 @@ span#total_number {
 	margin: 9px;
 }
 
-.all_cars_img {
+.all_truck_img {
 	background-color: #2224;
 	text-align: center;
 	height: 120px;
 	overflow: hidden;
 }
 
-.all_cars_img img {
+.all_truck_img img {
 	max-width: 12vmax;
 	max-height: 9vmax;
 	padding-top: 20px;
 }
 
-.car_name_and_brand {
+.truck_name_and_brand {
 	background-color: #0001;
 	padding: 2px;
 	border: 1px solid #0001;
 }
 
-.car_name_and_brand p {
+.truck_name_and_brand p {
 	border-bottom: 1px solid #4441;
 	font-size: 13px;
 	color: #444;
 	margin: 2px auto;
 }
 
-p#car_name {
+p#truck_name {
 	font-size: 15px;
 	color: #110;
 }
 
-.car_nav {
+.truck_nav {
 	background-color: #ff19;
 	padding: 2px;
 	border-radius: 2px;
@@ -301,7 +243,7 @@ p#car_name {
 	margin: 5px auto;
 }
 
-.car_nav p {
+.truck_nav p {
 	color: #222;
 	display: inline-block;
 	font-size: 13px;
@@ -309,11 +251,10 @@ p#car_name {
 	margin: 5px auto;
 }
 
-.car_nav img {
+.truck_nav img {
 	width: 15px;
 	opacity: 0.7;
 }
-
 
 /*=====================*/
 /*// car body type //*/
@@ -371,17 +312,11 @@ p#car_name {
 	max-width: 9vmax;
 }
 
-.car_body_scroll {
-	position: fixed;
-	top: 600px; 
-	width: 33%;
-}
-
 /*========================*/
 /*// Deals //*/
 
 .deal {
-	background-color: #8887;
+	background-color: #0009;
 	padding: 1px;
 }
 
@@ -395,10 +330,6 @@ p#car_name {
 .deal p {
 	font-size: 17px;
 	padding: 1px 0px 5px 20px;
-}
-
-.deal p small {
-	color: #555;
 }
 
 .deal img {
