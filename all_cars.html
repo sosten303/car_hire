@@ -11,8 +11,8 @@
 <body>
     <nav role="navigation">
     <div class="row">
-      <div class="col-md-1"></div>
-        <div class="col-md-10">
+      <div class="col-md-1 col-sm-12 col-xs-12"></div>
+        <div class="col-md-10 col-sm-12 col-xs-12">
           <ul id="nav-bar">
              <li><a href="index.html" id="logo"><span style="color: red;">Car</span>Hire</a></li>
             <div id="nav-bar-content">
@@ -27,8 +27,7 @@
              <li id="vehicles"><a href="all_vehicles.html">Vehicles <i class="fas fa-angle-down"></i></a>
               <ul id="vehicle_nav">
                 <li><a href="all_vehicles.html">All Vehicles</a></li>
-                <li><a href="all_cars.html">Cars</a></li><!-- Cars- is the combination of Sedans, Compact Sedans, Coupes
-                hatchbacks convertibles, wagens -->
+                <li><a href="all_cars.html">Cars</a></li>
                 <li><a href="suvs.html">SUVs</a></li>
                 <li><a href="van.html">Van</a></li>
                 <li><a href="truck.html">Track / Bakkie</a></li>
@@ -42,7 +41,13 @@
            </div>
           </ul>
         </div>
-       <div class="col-md-1"></div>
+       <div class="col-md-1 col-sm-12 col-xs-12"></div>
+    </div>
+    <!-- ============= toggle btn =========== -->
+    <div id="menu" class="menu_bar">
+      <div class="one"></div>
+      <div class="two"></div>
+      <div class="three"></div>
     </div>
   </nav>
 
@@ -63,8 +68,8 @@
 
   <section>
     <div class="row">
-      <div class="col-md-1"></div>
-      <div class="col-md-10">
+      <div class="col-md-1 col-sm-12 col-xs-12"></div>
+      <div class="col-md-10 col-sm-12 col-xs-12">
         <div class="search_nav">
           <ul>
             <li>Car type <i class="fas fa-angle-down"></i></li>
@@ -73,7 +78,7 @@
           </ul>
         </div>
       </div>
-      <div class="col-md-1"></div>
+      <div class="col-md-1 col-sm-12 col-xs-12"></div>
     </div>
   </section>
 
@@ -281,7 +286,41 @@
         		  	<h5>Make your travel memorable and enjable with our special deals of the month</h5>
                 <p>Recieve 20% discount off on monthly Car Rental</p>
                 <img src="img/car.jpg">
+                <p>ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             </div>
+            <section>
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+        <div class="car_carousel_header">
+            <p>Enjoy our cars</p>
+            <h5>Most Reviewed cars</h5>
+            <h6>Customer review gives us confidence to serve you with excellence</h6>
+        </div>
+
+        <div class="car_carousel_content">
+          <div class="car_carousel">
+            <img src="img/bmw-918408_1920.jpg" id="slider">
+          </div>
+          <button onclick="prev()">prev</button>
+          <button onclick="next()">next</button>
+          <p>ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+  </section>
   		    </div>
   		   </div>
   		 </div>
@@ -289,7 +328,7 @@
   	</div>
   </section>
 
-  <section>
+  <!-- <section>
   	<div class="row">
   		<div class="col-md-1"></div>
   		<div class="col-md-10">
@@ -310,7 +349,7 @@
   		</div>
   		<div class="col-md-1"></div>
   	</div>
-  </section>
+  </section> -->
 
   <section>
   	<div class="row">
@@ -331,6 +370,25 @@
   	</div>
   </section>
 
+  <!-- ============ toggle nav bar ================ -->
+  <script type="text/javascript">
+    var menuBar = document.getElementById('menu');
+    var menuBarContainer = document.getElementsByClassName('menu_bar');
+    var navContent = document.getElementById('nav-bar-content');
+    menuBar.onclick = menuToggle;
+    function menuToggle() {
+      for (var i = 0; i < menuBarContainer.length; i++) {
+      var navToggle =  menuBarContainer[i].classList.toggle('active_bar');
+      if (navToggle == false) {
+       navContent.style.display = 'none';
+      } else {
+        navContent.style.display = 'block';
+      }
+    }
+  }
+  </script>
+  <!-- ============================================ -->
+
   <!-- ====== parallax feature for the header section ==== -->
 
   <script type="text/javascript">
@@ -338,15 +396,15 @@
     const carFixed = document.getElementById("car_fixed");
     const parallax = document.getElementById('car_header_wrapper');
     window.onscroll = function() {
-      // let offset = window.pageYOffset;
+      let offset = window.pageYOffset;
       parallax.style.backgroundPositionY = offset * 0.7 + "px";
-      // let fixed = carFixed.offsetTop;
-      // if (window.pageYOffset > fixed) {
-      //   carFixed.className = "car_body_scroll";
-      // }
-      // else {
-      //   carFixed.className = "";
-      // }
+      let fixed = carFixed.offsetTop;
+      if (window.pageYOffset > fixed) {
+        carFixed.className = "car_body_scroll";
+      }
+      else {
+        carFixed.className = "";
+      }
     }
   }
 
