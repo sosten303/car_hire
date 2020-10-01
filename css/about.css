@@ -1,0 +1,275 @@
+/* About Us Css file*/
+body {
+  	font-family: sans-serif;
+  	background-color: lavender;
+  	overflow-x: hidden;
+  	padding: 0px;
+  	margin: 0px;
+  }
+
+  nav {
+    background-color: rgba(0,0,0,0.3);
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    z-index: 1;
+    padding: 0px !important;
+    font-size: 12px;
+    font-family: 'Lato', sans-serif;
+  }
+
+  ul#nav-bar {
+    padding: 5px;
+  }
+
+  ul#nav-bar li {
+    display: inline-block;
+    list-style-type: none;
+    margin-right: 5px;
+    padding: 8px 5px;
+  }
+
+   a#logo {
+   font-size: 22px;
+   color: #f4f4f4;
+   font-weight: bold;
+  }
+
+  ul#nav-bar li a {
+    padding: 5px;
+    text-decoration: none;
+    color: #fff;
+  }
+
+  ul#nav-bar li a:hover {
+    color: #f00;
+  }
+
+  #nav-bar-content {
+    display: inline;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    padding: 5px;
+  }
+
+  #nav-bar-content li {
+    margin-left: 10px;
+  }
+
+  #nav-bar-content li i {
+    margin-left: 3px;
+  }
+
+  nav li#book_btn {
+    background-color: rgba(255,25,0,0.6588);
+    font-size: 15px;
+    border-radius: 3px;
+    border: 1px solid red;
+    color: #eee;
+    cursor: pointer;
+  }
+
+  nav li#book_btn:hover {
+    background-color: red;
+  }
+
+  ul#reserv_nav, ul#vehicle_nav {
+    background-color: #111;
+    padding: 10px;
+    margin: 5px 20px 0px -5px;
+    border: 1px solid #4449;
+    border-radius: 2px;
+    position: absolute;
+    top: 40px;
+    display: none;
+  }
+
+  li#reservation:hover, li#vehicles:hover {
+    background-color: #111;
+    border: 1px solid #4449;
+    border-radius: 2px;
+    padding: 8px 4px 30px 4px;
+  }
+
+  li#reservation:hover ul#reserv_nav, li#vehicles:hover ul#vehicle_nav {
+    display: block;
+  }
+
+  li#reservation:hover a i, li#vehicles:hover a i {
+    color: #fff;
+    transform: rotateX(180deg);
+  }
+
+  ul#reserv_nav li, ul#vehicle_nav li {
+    list-style-type: none;
+    background-color: #222;
+    border: 1px solid #3339;
+    border-radius: 2px;
+    display: block;
+    padding: 1px;
+    margin: 1px auto;
+  }
+
+  ul#reserv_nav li:hover, ul#vehicle_nav li:hover {
+    background-color: #f009;
+    border: 1px solid #f008;
+  }
+
+  ul#reserv_nav li a, ul#vehicle_nav li a {
+    display: block;
+    padding: 5px;
+    margin: 1px;
+  }
+
+  ul#reserv_nav li:hover a, ul#vehicle_nav li:hover a {
+    color: #fff;
+  }
+
+/*================================*/
+/*// About //*/
+
+#about_header_wrapper {
+	background-color: #000;
+	background-image: url(../img/team.jpg);
+	background-size: 100%;
+}
+
+.about_header {
+	color: #fff;
+	background-color: #0008;
+	padding: 100px 0px 100px 125px;
+	margin-top: 76px;
+}
+
+.about_header p {
+	font-size: 15px;
+	color: #999;
+}
+
+p#about_btn {
+	background-image: linear-gradient(80deg, #ff0000, #ff5500, #ff04);
+	color: #fff;
+	font-size: 17px;
+	padding: 10px;
+	width: 200px;
+	text-align: center;
+	border-radius: 3px;
+	border: 1px solid #0069;
+	cursor: pointer;
+}
+
+/*===============================*/
+/*//Our Team //*/
+
+.team_header {
+  background-color: #2261;
+  padding: 10px;
+  border: 1px solid #2261;
+  border-radius: 1px;
+}
+
+.team_header h4 {
+  font-size: 22px;
+  color: #333;
+  margin: auto;
+}
+
+.team_header p {
+  font-size: 15px;
+  color: #444;
+}
+
+.team {
+  background-color: #2261;
+  padding: 10px;
+  float: left;
+  width: 100%;
+}
+
+.team_card {
+  background-color: #2626;
+  padding: 5px;
+  margin: 10px;
+  width: 300px;
+  float: left;
+}
+
+.team_img {
+  background-color: #000;
+  height: 250px;
+  overflow: hidden;
+}
+
+.team_img img {
+  width: 290px;
+  max-height: 20vmax;
+  background-color: #fff;
+  padding: 2px;
+}
+
+.team_about {
+  background-color: #999;
+  padding: 10px;
+}
+
+.team_social {
+  background-color: #fff;
+  padding: 10px;
+}
+
+.team_social a {
+  text-decoration: none;
+  color: #333;
+}
+
+.team_social i {
+  font-size: 20px;
+  padding: 10px;
+  margin-right: 5px;
+  border-radius: 100%;
+  background-color: #5559;
+}
+
+/*===============================*/
+/*// talk to us //*/
+
+.talk {
+	background-color: #9991;
+	padding: 10px;
+}
+
+.talk_header {
+	margin: 65px 0px;
+    text-align: center;
+}
+
+.talk_header h6, .talk_header p {
+	margin: auto;
+	padding: 5px 0px;
+}
+
+.talk_header h6 {
+	font-size: 35px;
+	color: #444;
+}
+
+.talk_header p {
+	font-size: 15px;
+	color: #5558;
+}
+
+.talk_content img {
+	max-height: 35vmax;
+	position: relative;
+	left: 35%;
+}
+
+.talk_content p {
+	font-size: 30px;
+	font-weight: 600;
+	color: #0091ff;
+	text-align: center;
+	margin: 10px auto;
+	padding: 10px 0px;
+}
