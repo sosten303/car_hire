@@ -131,8 +131,8 @@ body {
 
 #about_header_wrapper {
 	background-color: #000;
-	background-image: url(../img/team.jpg);
-	background-size: 100%;
+	background-image: url(../img/bmw-eyes.jpg);
+	background-size: 110% 150%;
 }
 
 .about_header {
@@ -160,7 +160,61 @@ p#about_btn {
 }
 
 /*===============================*/
-/*//Our Team //*/
+/*// Story //*/
+
+.story {
+  background-color: #2261;
+  padding: 10px;
+  border: 1px solid #2661;
+  margin: 20px auto;
+}
+
+.story span {
+  font-size: 15px;
+  color: #5557;
+}
+
+.story h2 {
+  color: #111;
+}
+
+.story p {
+  color: #333;
+  font-size: 15px;
+}
+
+
+/*===============================*/
+/*// Mission //*/
+
+.missinon {
+  background-color: #2261;
+  padding: 10px;
+  border: 1px solid #2661;
+  margin: 20px auto;
+}
+
+.missinon i {
+  color: #f52;
+  background-color: #2222;
+  border: 1px solid #2221;
+  font-size: 17px;
+  padding: 10px;
+  border-radius: 100%;
+}
+
+.missinon h3 {
+  color: #111;
+  margin: 15px auto;
+}
+
+.missinon p {
+  font-size: 14px;
+  color: #333;
+}
+
+/*===============================*/
+/*// Our Team //*/
 
 .team_header {
   background-color: #2261;
@@ -171,51 +225,71 @@ p#about_btn {
 
 .team_header h4 {
   font-size: 22px;
-  color: #333;
+  color: #111;
   margin: auto;
 }
 
 .team_header p {
   font-size: 15px;
-  color: #444;
+  color: #333;
 }
 
 .team {
   background-color: #2261;
-  padding: 10px;
+  padding: 10px 0px 10px 20px;
   float: left;
   width: 100%;
 }
 
 .team_card {
-  background-color: #2626;
-  padding: 5px;
+  background-color: inherit;
+  border: 1px solid #4443;
+  border-radius: 2px;
   margin: 10px;
-  width: 300px;
+  width: 250px;
   float: left;
 }
 
 .team_img {
-  background-color: #000;
-  height: 250px;
+  background-color: #0001;
+  height: 170px;
   overflow: hidden;
+  text-align: center;
+  padding-top: 10px;
 }
 
 .team_img img {
-  width: 290px;
-  max-height: 20vmax;
-  background-color: #fff;
+  max-height: 10vmax;
+  background-color: #3337;
   padding: 2px;
+  border-radius: 100%;
 }
 
 .team_about {
-  background-color: #999;
+  background-color: #8881;
   padding: 10px;
+  text-align: center;
+}
+
+.team_about h5 {
+  font-weight: 500;
+  font-size: 14px;
+  color: #111;
+  margin: auto;
+}
+
+.team_about span {
+  color: #1118;
+  font-size: 14px;
+}
+
+.team_about p {
+  font-size: 13px;
+  color: #444;
 }
 
 .team_social {
-  background-color: #fff;
-  padding: 10px;
+  padding: 2px;
 }
 
 .team_social a {
@@ -224,11 +298,28 @@ p#about_btn {
 }
 
 .team_social i {
-  font-size: 20px;
+  font-size: 15px;
+  color: #424;
   padding: 10px;
   margin-right: 5px;
   border-radius: 100%;
-  background-color: #5559;
+  background-color: #5553;
+}
+
+/*===============================*/
+/*// Offer //*/
+
+.offer {
+  background-color: #4441;
+  border: 1px solid #4441;
+  padding: 10px;
+  margin: 20px auto;
+}
+
+.offer video {
+   width: 50%;
+   position: relative;
+   left: 25%;
 }
 
 /*===============================*/
