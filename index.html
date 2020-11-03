@@ -28,16 +28,15 @@
              <li id="vehicles"><a href="all_vehicles.html">Vehicles <i class="fas fa-angle-down"></i></a>
               <ul id="vehicle_nav">
                 <li><a href="all_vehicles.html">All Vehicles</a></li>
-                <li><a href="all_cars.html">Cars</a></li><!-- Cars- is the combination of Sedans, Compact Sedans, Coupes
-                hatchbacks convertibles, wagens -->
+                <li><a href="all_cars.html">Cars</a></li>
                 <li><a href="suvs.html">SUVs</a></li>
                 <li><a href="van.html">Van</a></li>
                 <li><a href="truck.html">Track / Bakkie</a></li>
               </ul>
              </li>
-             <li><a href="#">About Us</a></li>
+             <li><a href="about.html">About Us</a></li>
              <li><a href="#">Customer Support</a></li>
-             <li><a href="#">Contact</a></li>
+             <li><a href="contact.html">Contact</a></li>
              <li><a href="#">FAQ</a></li>
              <li id="book_btn">Book a Car Now</li>
            </div>
@@ -57,27 +56,41 @@
       <div class="col-md-4">
         <div id="book_form_wrapper">
         <form>
+          <h1>Rent a Car</h1>
             <ul>
-              <li id="choose_car">Select your Car [Brand] <i class="fas fa-angle-down"></i> </li>
+              <li id="choose_car">Select your Car <i class="fas fa-angle-down"></i> </li>
             </ul>
             <div id="form_choose_car">
               <label class="car_type_container">
-                 <input type="radio" name="cartype" value="Economy" checked="checked">Audi <i class="fas fa-angle-down"></i>
-                 -Car Models to appear here e.g A16
+                 <input type="radio" name="cartype" value="Economy" checked="checked"><span>Audi</span>
                  <div class="car_check_btn"></div>
             </label>
+            <span class="car_tip_body car_tip"></span>
+            <div class="car_model">
+                   <a href="#">A16</a>
+                   <a href="#">Audi 2019</a>
+                   <a href="#">Audi vx200</a>
+                   <a href="#">Audi vx200</a>
+                   <a href="#">Audi vx200</a>
+                   <a href="#">Audi 2020</a>
+                   <a href="#" id="view_more">view more ...</a>
+                 </div>
               <label class="car_type_container">
-                 <input type="radio" name="cartype" value="Luxury" checked="checked">BMW <i class="fas fa-angle-down"></i>
-                 -BMW 3 Series and more
+                 <input type="radio" name="cartype" value="Luxury" checked="checked"><span>BMW</span>
                  <div class="car_check_btn"></div>
             </label>
+            <span class="car_tip_body car_tip"></span>
+            <div class="car_model">
+                   <a href="#">BMW 3 Series</a>
+                   <a href="#">BMW X5</a>
+                 </div>
               <label class="car_type_container">
-                 <input type="radio" name="cartype" value="Standart" checked="checked">MINI <i class="fas fa-angle-down"></i>
+                 <input type="radio" name="cartype" value="Standart" checked="checked"><span>MINI</span> 
                  -Cooper, Cooper Convertible, countryman
                  <div class="car_check_btn"></div>
             </label>
             <label class="car_type_container">
-                 <input type="radio" name="cartype" value="Standart" checked="checked">Land Rover <i class="fas fa-angle-down"></i>
+                 <input type="radio" name="cartype" value="Standart" checked="checked"><span>Land Rover</span>
                  -Range Rover Descovery, Range Rover Sport
                  <div class="car_check_btn"></div>
             </label>
@@ -141,13 +154,13 @@
           -----------------------------------------------------------------------
           3-CHECKOUT[another page]
            -Returning customer? click here to login btn
-           *comment: If you have shopped with us before, please enter your details bellow.
+           *comment: If you have shopped with us before, please enter your details below.
             if you are a new customer, please proceed to the Billing and Shipping section.
             *form: Username or email, password, login btn, Remember me[check box], lost your
             password?
             ------------------------------------------------
            -Have a coupon? Click here to enter your code
-           *comment: if you have a coupon code, please it below.
+           *comment: if you have a coupon code, please put it below.
            *form: coupon code[input field], Apply coupon btn
 
           1.[attached to the main form above] personal information/Billing details
@@ -1048,9 +1061,9 @@ bookingForm();
   function CarChoice() {
     if (ChooseCarContent.style.display == "none") {
       ChooseCarContent.style.display = "block";
-      ChooseCarContent.style.position = "absolute";
-      ChooseCarContent.style.right = "20px";
-      ChooseCarContent.style.left = "20px";
+      // ChooseCarContent.style.position = "absolute";
+      // ChooseCarContent.style.right = "20px";
+      // ChooseCarContent.style.left = "20px";
     }
     else{
       ChooseCarContent.style.display = "none";

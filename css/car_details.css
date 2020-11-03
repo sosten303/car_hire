@@ -20,12 +20,10 @@ body {
   }
 
   ul#nav-bar {
-    /*background-color: #f4f4;*/
     padding: 5px;
   }
 
   ul#nav-bar li {
-    /*background-color: #f00;*/
     display: inline-block;
     list-style-type: none;
     margin-right: 5px;
@@ -150,11 +148,6 @@ body {
   border-radius: 3px;
 }
 
-.car_details_content {
-	background-color: #5557;
-	padding: 10px;
-}
-
 p#book_price {
   font-size: 24px;
   font-weight: bold;
@@ -167,10 +160,10 @@ p#book_price small {
 }
 
 .car_details_content  h3 {
-  color: #006;
-  font-size: 17px;
+  color: #025;
+  font-size: 25px;
   font-weight: 400;
-  text-shadow: 1px -1px 1px #0034;
+  padding-bottom: 10px;
   border-bottom: 1px solid #5552;
 }
 
@@ -179,6 +172,16 @@ p#book_price small {
   padding: 10px;
   border: 1px solid #6665;
   border-radius: 2px;
+  margin: 1px 0px;
+}
+
+
+.car_container p {
+  font-size: 14px;
+}
+
+.car_container p i {
+  color: #023;
 }
 
 .car_details_nav {
@@ -206,6 +209,7 @@ p#book_price small {
   background-color: #6663;
   padding: 10px;
   border: 1px solid #6662;
+  border-radius: 2px;
   float: left;
   width: 100%;
   margin: auto;
@@ -248,6 +252,327 @@ p#book_price small {
   color: #333;
   padding: 2px 8px 2px 2px;
 }
+
+/*=======================*/
+/*// Rent a Car form //*/
+
+.rent_form_wrapper {
+  background-color: #4444;
+  border: 1px solid #4441;
+  margin-top: 10px;
+  border-radius: 2px;
+  padding: 25px 200px 25px 200px;
+}
+
+.rent_header h4 {
+  color: #111;
+  font-size: 25px;
+  margin: 5px auto;
+}
+
+.rent_header p {
+  color: #333;
+  font-size: 15px;
+}
+
+.rent_form_wrapper form {
+  background-color: #ccc;
+  border: 1px solid #4446;
+  border-radius: 2px;
+}
+
+/*===============================*/
+/*Pick-up Location*/
+
+.rent_form_wrapper form .pickup_location_wrapper h5 {
+  font-size: 17px;
+  color: #333;
+  margin: 5px auto;
+}
+
+.rent_form_wrapper form .pickup_location_wrapper {
+  background-color: #f2f2f2;
+  padding: 40px 0px 25px 150px;
+  border-bottom: 1px solid #4441;
+}
+
+.rent_form_wrapper form .pickup_location {
+  padding: 5px 0px;
+}
+
+.rent_form_wrapper form .pickup_location span {
+  display: block;
+  font-size: 17px;
+  padding: 10px 0px;
+  color: #023;
+}
+
+.rent_form_wrapper form .pickup_location i {
+  font-size: 15px;
+  color: #ccc;
+  background: #023;
+  padding: 10px 12px;
+  position: absolute;
+}
+
+
+.rent_form_wrapper form input[type=text] {
+  width: 72%;
+  border: 1px solid #5559;
+  border-radius: 2px;
+  padding: 8px 50px;
+  color: #222;
+  font-size: 15px;
+}
+
+.rent_form_wrapper form .checkbox {
+  padding: 5px 0px;
+}
+
+.rent_form_wrapper form .checkbox span {
+  color: #023;
+  font-size: 15px;
+}
+
+/*==========================*/
+/*Pick-up Date and time*/
+
+#pickup_time {
+  background: #009;
+  padding: 10px;
+  display: none;
+}
+.rent_form_wrapper form .pickup_date_time_wrapper {
+  background-color: #f2f2f2;
+  float: left;
+  width: 100%;
+  padding: 20px 0px 25px 150px;
+  border-bottom: 1px solid #4441;
+}
+
+.rent_form_wrapper form .pickup_date_time_wrapper h5 {
+  font-size: 17px;
+  color: #333;
+  margin: auto;
+}
+
+.rent_form_wrapper form .pickup_date {
+  /*background-color: yellow;*/
+  padding: 10px 0px;
+  float: left;
+}
+
+.rent_form_wrapper form .pickup_date span {
+  display: block;
+  font-size: 17px;
+  color: #023;
+  padding: 10px 0px;
+}
+
+.rent_form_wrapper form .pickup_date input[type=date] {
+ padding: 8px 0px 8px 50px;
+ font-size: 16px;
+ color: #333;
+ border: 1px solid #7777;
+ border-radius: 2px;
+}
+
+.rent_form_wrapper form .pickup_date i {
+  font-size: 15px;
+  color: #eee;
+  background-color: #023;
+  padding: 10px 12px;
+  position: absolute;
+}
+
+.rent_form_wrapper form .pickup_time {
+  /*background-color: yellow;*/
+  padding: 15px;
+  float: left;
+  margin-left: 50px;
+}
+
+.rent_form_wrapper form .pickup_time span {
+  display: block;
+  padding: 9px 0px;
+  margin: auto;
+}
+
+.rent_form_wrapper form .pickup_time a {
+  background-color: #fff;
+  color: #444;
+  border: 1px solid #7777;
+  border-radius: 2px;
+  font-size: 15px;
+  padding: 8px 60px 8px 30px;
+  cursor: pointer;
+}
+
+.rent_form_wrapper form .pickup_time i#clock {
+  color: #eee;
+  background-color: #023;
+  padding: 9px 10px;
+}
+
+.rent_form_wrapper form .pickup_time i#angle_down {
+  color: #444;
+  padding: 2px;
+  position: absolute;
+  margin-left: -25px;
+  margin-top: 9px;
+}
+
+/*==========================*/
+/*Return Date and time*/
+
+#return_time {
+  display: none;
+}
+
+.rent_form_wrapper form .return_date_time_wrapper {
+  background-color: #f2f2f2;
+  float: left;
+  width: 100%;
+  padding: 20px 0px 25px 150px;
+  border-bottom: 1px solid #4441;
+}
+
+.rent_form_wrapper form .return_date {
+  /*background-color: yellow;*/
+  padding: 10px 0px;
+  float: left;
+}
+
+
+.rent_form_wrapper form .return_date span {
+ display: block;
+  padding: 9px 0px;
+  margin: auto;
+}
+
+.rent_form_wrapper form .return_date input[type=date] {
+ padding: 8px 0px 8px 50px;
+ font-size: 16px;
+ color: #333;
+ border: 1px solid #7777;
+ border-radius: 2px;
+}
+
+.rent_form_wrapper form .return_date i {
+  font-size: 15px;
+  color: #eee;
+  background-color: #023;
+  padding: 10px 12px;
+  position: absolute;
+}
+
+.rent_form_wrapper form .return_time {
+  /*background-color: yellow;*/
+  padding: 10px;
+  float: left;
+  margin-left: 50px;
+}
+
+.rent_form_wrapper form .return_time span {
+  display: block;
+  padding: 9px 0px;
+  margin: auto;
+}
+
+.rent_form_wrapper form .return_time a {
+  background-color: #fff;
+  color: #444;
+  border: 1px solid #7777;
+  border-radius: 2px;
+  font-size: 15px;
+  padding: 8px 60px 8px 30px;
+  cursor: pointer;
+}
+
+.rent_form_wrapper form .return_time i#clock {
+  color: #eee;
+  background-color: #023;
+  padding: 9px 10px;
+}
+
+.rent_form_wrapper form .return_time i#angle_down {
+  color: #444;
+  padding: 2px;
+  position: absolute;
+  margin-left: -25px;
+  margin-top: 9px;
+}
+
+/*==========================*/
+/*Renter's Age*/
+
+#age {
+  display: none;
+}
+
+.age {
+  background-color: #f2f2f2;
+  padding: 20px 0px 25px 150px;
+  float: left;
+  width: 100%;
+}
+
+.age p {
+  font-size: 17px;
+  color: #023;
+  padding: 10px 0px;
+  margin: auto;
+}
+
+.age a {
+  background-color: #fff;
+  padding: 9px 60px;
+  font-size: 15px;
+  color: #444;
+  cursor: pointer;
+  border: 1px solid #3338;
+  border-radius: 2px;
+  display: inline-block;
+  width: 72%;
+}
+
+.age i {
+  position: absolute;
+  background-color: #023;
+  color: #fff;
+  padding: 11px;
+}
+
+.age i#angle_down {
+  position: absolute;
+  margin-left: -35px;
+  background-color: transparent;
+  color: #444;
+  padding: 10px;
+
+}
+/*==========================*/
+/*Continue Booking btn*/
+
+.rent_form_wrapper form input[type=submit] {
+  background-color: #023;
+  padding: 10px;
+  border-radius: 3px;
+  border: 1px solid #009;
+  color: #bbb;
+  margin-top: 20px;
+  margin-left: 150px;
+  margin-bottom: 20px;
+  width: 57%;
+  text-align: center;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+.rent_form_wrapper form input[type=submit]:hover {
+  opacity: 0.7;
+}
+/*==========================*/
 
 #car_details_btn {
   display: inline-block;

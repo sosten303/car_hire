@@ -1,4 +1,4 @@
-/* About Us Css file*/
+/* Contact Us Css file*/
 body {
   	font-family: sans-serif;
   	background-color: lavender;
@@ -127,27 +127,27 @@ body {
   }
 
 /*================================*/
-/*// About //*/
+/*// Contact //*/
 
-#about_header_wrapper {
+#contact_header_wrapper {
 	background-color: #000;
 	background-image: url(../img/bmw-eyes.jpg);
 	background-size: 110% 150%;
 }
 
-.about_header {
+.contact_header {
 	color: #fff;
 	background-color: #0008;
 	padding: 100px 0px 100px 125px;
 	margin-top: 76px;
 }
 
-.about_header p {
+.contact_header p {
 	font-size: 15px;
 	color: #999;
 }
 
-p#about_btn {
+p#contact_btn {
 	background-image: linear-gradient(80deg, #ff0000, #ff5500, #ff04);
 	color: #fff;
 	font-size: 17px;
@@ -214,97 +214,159 @@ p#about_btn {
 }
 
 /*===============================*/
-/*// Our Team //*/
+/*// Contact Form //*/
 
-.team_header {
-  background-color: #2261;
+.contact_form {
+  background-color: #4441;
   padding: 10px;
-  border: 1px solid #2261;
-  border-radius: 1px;
-}
-
-.team_header h4 {
-  font-size: 22px;
-  color: #111;
-  margin: auto;
-}
-
-.team_header p {
-  font-size: 15px;
-  color: #333;
-}
-
-.team {
-  background-color: #2261;
-  padding: 10px 0px 10px 20px;
+  border: 1px solid #4441;
   float: left;
   width: 100%;
 }
 
-.team_card {
-  background-color: inherit;
-  border: 1px solid #4443;
-  border-radius: 2px;
-  margin: 10px;
-  width: 250px;
-  float: left;
-}
-
-.team_img {
-  background-color: #0001;
-  height: 170px;
-  overflow: hidden;
-  text-align: center;
-  padding-top: 10px;
-}
-
-.team_img img {
-  max-height: 10vmax;
-  background: linear-gradient(180deg, #ff04, #000);
+.contact_form_header {
+  border-bottom: 1px solid #4441;
   padding: 5px;
-  border-radius: 100%;
 }
 
-.team_about {
-  background-color: #8881;
-  padding: 10px;
-  text-align: center;
+.contact_form_header h1 {
+  color: #333;
+  margin: 10px auto;
 }
 
-.team_about h5 {
-  font-weight: 500;
+.contact_form_header p {
   font-size: 14px;
-  color: #111;
-  margin: auto;
-}
-
-.team_about span {
-  color: #1118;
-  font-size: 14px;
-}
-
-.team_about p {
-  font-size: 13px;
   color: #444;
 }
 
-.team_social {
-  padding: 2px;
+.contact_img {
+  float: left;
+  width: 50%;
+  /*background-color: yellow;*/
+  padding: 5px;
+  margin-right: 5px;
 }
 
-.team_social a {
-  text-decoration: none;
+.contact_img img {
+  width: 100%;
+}
+
+.contact_form_container {
+  float: left;
+  width: 45%;
+  margin-left: 40px;
+  padding: 5px;
+}
+
+.contact_form_container form {
+  background-color: #6663;
+  border: 1px solid #4441
+  border-radius 5px;
+  padding: 20px;
+}
+
+.contact_form_container form label {
+  font-size: 14px;
+  color: #222;
+}
+
+.contact_form_container form input[type=text], .contact_form_container form textarea {
+  font-size: 13px;
+  padding: 10px;
+  margin: 10px auto;
+  border-radius: 2px;
+  border: 1px solid #2226;
+  width: 100%;
+}
+
+.contact_form_container form input[type=text]:focus, .contact_form_container form textarea:focus {
+  border: 1px solid #f00;
+}
+
+.contact_form_container form input[type=submit] {
+  background-color: blue;
+  padding: 10px;
+  font-size: 15px;
+  color: #fff;
+  width: 100%;
+  cursor: pointer;
+  border: 1px solid blue;
+  border-radius: 3px;
+}
+
+.contact_form_container form input[type=submit]:hover {
+  opacity: 0.8;
+}
+
+/*===============================*/
+/*// Map Location //*/
+
+.map_location h1 {
+  color: #222;
+}
+
+.map_location p {
+  color: #555;
+  font-size: 13px;
+}
+
+.map_location {
+  background-color: #4441;
+  border: 1px solid #4441;
+  border-radius: 2px;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.map_location img {
+  width: 158vmin;
+  height: 55vmin;
+  border: 1px solid #4441;
+}
+
+/*===============================*/
+/*// Contact-info //*/
+
+.contact_info {
+  background-color: #4441;
+  border: 1px solid #4441;
+  border-radius: 2px;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.contact_info_header {
+  border-bottom: 1px solid #4441;
+}
+
+.contact_info_header h2 {
+  color: #222;
+}
+
+.contact_info_content h3 {
+  color: #3338;
+  font-weight: normal;
+  font-size: 17px;
+  margin-top: 20px;
+}
+
+.contact_info_content {
+  padding: 10px;
+}
+
+.contact_info_content p {
+  font-size: 15px;
   color: #333;
 }
 
-.team_social i {
-  font-size: 15px;
-  color: #424;
-  padding: 10px;
-  margin-right: 5px;
-  border-radius: 100%;
-  background-color: #5553;
+.contact_info_content p i {
+  font-size: 14px;
+  background-color: #0001;
+  padding: 5px;
+  margin-right: 1px;
+  border-radius: 2px;
 }
+
 
 /*===============================*/
 /*// Offer //*/
