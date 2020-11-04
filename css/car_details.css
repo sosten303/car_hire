@@ -185,10 +185,10 @@ p#book_price small {
 }
 
 .car_details_nav {
-	background-color: yellow;
+	/*background-color: yellow;*/
 	padding: 5px;
-  border: 1px solid #0005;
-  border-radius: 2px;
+  /*border: 1px solid #4441;*/
+  /*border-radius: 2px;*/
 }
 
 .car_details_nav p {
@@ -196,8 +196,9 @@ p#book_price small {
   font-size: 15px;
 	padding: 2px 10px 2px 2px;
   margin: auto 1px;
-  background-color: #4441;
-  border: 1px solid #3331;
+  background-color: #9991;
+  border: 1px solid #9992;
+  color: #023;
 }
 
 .car_details_nav img {
@@ -221,16 +222,16 @@ p#book_price small {
 }
 
 .car_details_include ul {
-  background-color: yellow;
+  /*background-color: yellow;*/
   float: left;
   width: 100%;
   padding: 5px;
-  border: 1px solid #2225;
-  border-radius: 2px;
+  /*border: 1px solid #9992;*/
+  /*border-radius: 2px;*/
 }
 
 .car_include {
-  background-color: #6663;
+  background-color: #9992;
   padding: 5px;
   float: left;
   width: 100%;
@@ -241,7 +242,7 @@ p#book_price small {
   color: #222;
   padding: 5px;
   list-style-type: none;
-  background-color: #5552;
+  /*background-color: #5552;*/
   margin: 2px 40px 2px 0px;
   float: left;
   width: 30%;
@@ -574,32 +575,19 @@ p#book_price small {
 }
 /*==========================*/
 
-#car_details_btn {
-  display: inline-block;
-	background-color: #0054ff;
-	padding: 10px;
-	text-align: center;
-	border-radius: 3px;
-	border: 1px solid #0064ff;
-	width: 20%;
-}
-
-#car_details_btn a {
-   text-decoration: none;
-   color: #fff;
-}
 
 .car_review_similar {
-  background-color: #000;
+  background-color: #4441;
+  border: 1px solid #4441;
   padding: 10px;
   margin-top: 20px;
 }
 
 .car_reviwew_wrapper {
-  background-color: #fff;
+  background-color: #4441;
   padding: 10px;
   border-radius: 2px;
-  border: 1px solid #4445;
+  border: 1px solid #4441;
 }
 
 .car_reviwew_wrapper h5 {
@@ -609,8 +597,8 @@ p#book_price small {
 }
 
 .car_details_review {
-  background-color: #8887;
-  border: 1px solid #5559;
+  background-color: #9991;
+  border: 1px solid #9991;
   border-radius: 2px;
   margin: 5px auto;
   padding: 10px;
@@ -628,12 +616,12 @@ p#book_price small {
 }
 
 .car_similar_wrapper {
-  background-color: #fff;
+  background-color: #9993;
   padding: 1px;
   float: left;
   width: 100%;
   border-radius: 2px;
-  border: 1px solid #4445;
+  border: 1px solid #9992;
 }
 
 .car_similar_wrapper h6 {
@@ -643,7 +631,7 @@ p#book_price small {
 }
 
 .car_details_similar {
-  background-color: yellow;
+  /*background-color: yellow;*/
   float: left;
   width: 100%;
   padding-left: 30px;
@@ -667,7 +655,7 @@ p#book_price small {
 }
 
 .car_details_img {
-  background-color: yellow;
+  /*background-color: #6667;*/
   height: 100px;
   width: 180px;
   overflow: hidden;
@@ -685,7 +673,7 @@ p#car_name {
 }
 
 .car_details_card_nav {
-  background-color: yellow;
+  /*background-color: yellow;*/
   padding: 2px;
 }
 

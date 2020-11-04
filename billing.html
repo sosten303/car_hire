@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Billing Details</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="css/fontawesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-grid.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/car_details.css">
+</head>
+<body>
+
+  <nav role="navigation">
+    <div class="row">
+      <div class="col-md-1"></div>
+        <div class="col-md-10">
+          <ul id="nav-bar">
+             <li><a href="index.html" id="logo"><span style="color: red;">Car</span>Hire</a></li>
+            <div id="nav-bar-content">
+             <li><a href="index.html">Home</a></li>
+             <li  id="reservation"><a href="#">Reservations <i class="fas fa-angle-down"></i></a>
+                <ul id="reserv_nav">
+                  <li><a href="#">Book a Vehicle</a></li>
+                  <li><a href="#">Rent a vehicle</a></li>
+                  <li><a href="#">View / modify / cancel a Reservation</a></li>
+                </ul>
+             </li>
+            <li id="vehicles"><a href="all_vehicles.html">Vehicles <i class="fas fa-angle-down"></i></a>
+              <ul id="vehicle_nav">
+                <li><a href="all_vehicles.html">All Vehicles</a></li>
+                <li><a href="all_cars.html">Cars</a></li>
+                <li><a href="suvs.html">SUVs</a></li>
+                <li><a href="van.html">Van</a></li>
+                <li><a href="truck.html">Track / Bakkie</a></li>
+              </ul>
+             </li>
+             <li><a href="about.html">About Us</a></li>
+             <li><a href="#">Customer Support</a></li>
+             <li><a href="contact.html">Contact</a></li>
+             <li><a href="#">FAQ</a></li>
+             <li id="book_btn">Book a Car Now</li>
+           </div>
+          </ul>
+        </div>
+       <div class="col-md-1"></div>
+    </div>
+  </nav>
+<section>
+   <div class="car_details">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="car_img">
+          <img src="img/kindpng_lr.png">
+        </div>
+      </div>
+      </div>
+   </div>
+</section>
+
+<section>
+  <div class="row">
+    <div class="col-md-1">col</div>
+    <div class="col-md-10">
+      <h1>2. Continue Booking</h1>
+      <h3>Billing section</h3>
+      <p>Fill the form to continue with the reservation</p>
+
+      <form>
+        <label>
+          <span>First name</span>
+          <input type="text" name="" placeholder="first name">
+        </label>
+        <p></p>
+        <label>
+          <span>Last name</span>
+          <input type="text" name="" placeholder="last name">
+        </label>
+        <p></p>
+        <label>
+          <span>Phone number</span>
+          <input type="text" name="" placeholder="eg +260...">
+        </label>
+        <p></p>
+        <label>
+          <span>Email Address</span>
+          <input type="text" name="" placeholder="name@mail.com">
+        </label>
+        <input type="checkbox" name="" checked="checked">
+           <span> Receive Email Promotions from CarHire.
+                 By selecting this box, you would like to receive email promotions, surveys and offers from National Car Rental. Note that your email interactions can be used to perform analytics and produce content & ads tailored to your interests. Please understand that there is no charge and that you can unsubscribe at any time by (i) using the links provided in the emails or (ii) contacting us. Please consult our Privacy Policy and our Cookie Policy to find out more.
+          </span>
+        <p></p>
+        <label>
+          <span>Physical address</span>
+          <input type="text" name="" placeholder="address">
+        </label>
+        <p></p>
+        <label>
+          <span>City</span>
+          <input type="text" name="" placeholder="City">
+        </label>
+        <p></p>
+        <label>
+          <span>Country</span>
+          <input type="text" name="" placeholder="Country">
+        </label>
+        <p></p>
+        <label>
+          <span>Zip code</span>
+          <input type="text" name="" placeholder="Zip code">
+        </label>
+        <p></p>
+        <label>
+          <span></span>
+          <input type="checkbox" checked="checked"> Create an account
+        </label>
+
+        <hr>
+
+        <h4>Your Order</h4>
+        <table>
+          <tr>
+            <td>Product</td>
+            <td>Total</td>
+          </tr>
+          <tr>
+            <td>Car Booking *1</td>
+            <td>$10.00</td>
+          </tr>
+          <tr>
+            <td>Subtotal</td>
+            <td>$10.00</td>
+          </tr>
+          <tr>
+            <td>Total</td>
+            <td>$10.00</td>
+          </tr>
+        </table>
+        
+          ------------------------------
+          <h4>payment method</h4>
+          <div>
+            <label>
+            <input type="radio" name="payment" value="bank transfer" checked="checked">
+            <span>Direct bank transfer</span>
+          </label>
+          <p>*comment: make your payments directly into our bank account. please
+          use your Order ID as the payment reference. your order will not be
+          shipped until the funds have cleared in our account</p>
+          -----------------------------------------------------------------
+        </div>
+
+        <div>
+        <label>
+          <input type="radio" name="payment" value="check payment">
+          <span>check payments</span>
+        </label>
+          <p>*comment: Please send a check to Store Name, Store Street, Store Town,
+          Store State/Country, Store Postcode.</p>
+          -------------------------------------------------------------------
+        </div>
+
+        <div>
+          <label>
+            <input type="radio" name="payment" value="cash on delivery">
+          <span>Cash on delivery</span>
+        </label>
+          <p>*comment: Pay with Cash upon delivery.</p>
+        </div>
+        <input type="submit" value=" Book now / place order">
+      </form>
+    </div>
+    <div class="col-md-1">col</div>
+  </div>
+</section>
+</body>
+</html>
