@@ -1,0 +1,352 @@
+/*Car Billing Css file*/
+
+body {
+  	font-family: sans-serif;
+  	background-color: lavender;
+  	overflow-x: hidden;
+  	padding: 0px;
+  	margin: 0px;
+  }
+
+  nav {
+    background-color: rgba(0,0,0,0.3);
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    z-index: 1;
+    padding: 0px !important;
+    font-size: 12px;
+    font-family: 'Lato', sans-serif;
+  }
+
+  ul#nav-bar {
+    padding: 5px;
+  }
+
+  ul#nav-bar li {
+    display: inline-block;
+    list-style-type: none;
+    margin-right: 5px;
+    padding: 8px 5px;
+  }
+
+   a#logo {
+   font-size: 22px;
+   color: #f4f4f4;
+   font-weight: bold;
+  }
+
+  ul#nav-bar li a {
+    padding: 5px;
+    text-decoration: none;
+    color: #fff;
+  }
+
+  ul#nav-bar li a:hover {
+    color: #f00;
+  }
+
+  #nav-bar-content {
+    display: inline;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    padding: 5px;
+  }
+
+  #nav-bar-content li {
+    margin-left: 10px;
+  }
+
+  #nav-bar-content li i {
+    margin-left: 3px;
+  }
+
+  nav li#book_btn {
+    background-color: rgba(255,25,0,0.6588);
+    font-size: 15px;
+    border-radius: 3px;
+    border: 1px solid red;
+    color: #eee;
+    cursor: pointer;
+  }
+
+  nav li#book_btn:hover {
+    background-color: red;
+  }
+
+  ul#reserv_nav, ul#vehicle_nav {
+    background-color: #111;
+    padding: 10px;
+    margin: 5px 20px 0px -5px;
+    border: 1px solid #4449;
+    border-radius: 2px;
+    position: absolute;
+    top: 40px;
+    display: none;
+  }
+
+  li#reservation:hover, li#vehicles:hover {
+    background-color: #111;
+    border: 1px solid #4449;
+    border-radius: 2px;
+    padding: 8px 4px 30px 4px;
+  }
+
+  li#reservation:hover ul#reserv_nav, li#vehicles:hover ul#vehicle_nav {
+    display: block;
+  }
+
+  li#reservation:hover a i, li#vehicles:hover a i {
+    color: #fff;
+    transform: rotateX(180deg);
+  }
+
+  ul#reserv_nav li, ul#vehicle_nav li {
+    list-style-type: none;
+    background-color: #222;
+    border: 1px solid #3339;
+    border-radius: 2px;
+    display: block;
+    padding: 1px;
+    margin: 1px auto;
+  }
+
+  ul#reserv_nav li:hover, ul#vehicle_nav li:hover {
+    background-color: #f009;
+    border: 1px solid #f008;
+  }
+
+  ul#reserv_nav li a, ul#vehicle_nav li a {
+    display: block;
+    padding: 5px;
+    margin: 1px;
+  }
+
+  ul#reserv_nav li:hover a, ul#vehicle_nav li:hover a {
+    color: #fff;
+  }
+
+/*================================*/
+/*// Car Details //*/
+
+.car_details {
+	background-color: #0008;
+}
+
+.car_img {
+	background-color: #fff;
+	padding: 40px 10px;
+}
+
+.car_img img {
+  display: block;
+  max-width: 20vmax;
+  max-height: 30vmax;
+  margin: auto;
+  border-radius: 3px;
+}
+
+.car_wrapper {
+  margin-top: 75px;
+  background-color: yellow;
+  float: left;
+  width: 100%;
+  padding: 50px;
+}
+
+.car_content {
+  background-color: #0007;
+  float: left;
+  width: 30%;
+}
+
+.car_name {
+  background-color: #999;
+  padding: 1px;
+}
+
+.car_name small a {
+  font-size: 15px;
+  color: #023;
+}
+
+.car_name h3 {
+  color: #222;
+  font-weight: normal;
+  font-size: 20px;
+  margin: 5px auto;
+}
+
+
+.car_name h4 {
+  color: #023;
+  margin: 2px auto;
+}
+
+.car_name p {
+  color: #444;
+  font-size: 15px;
+  margin: 2px auto;
+}
+
+.car_reservation {
+  background-color: #0009;
+  float: left;
+}
+
+/*============================*/
+/*// Billing// */
+
+.billing_header {
+  background-color: #4441;
+  padding: 10px;
+  margin: 20px 0px;
+  border: 1px solid #4441;
+}
+
+.billing_header h1 {
+  color: #222;
+}
+
+.billing_header h4 {
+  color: #444;
+  margin: auto;
+}
+
+.billing_header p {
+  font-size: 14px;
+  color: #777;
+  margin: 5px auto;
+}
+
+.billing_form {
+  background-color: #4441;
+  border: 1px solid #4441;
+  padding: 10px;
+  float: left;
+  width: 100%;
+}
+
+.billing_form form {
+  padding: 10px;
+  float: left;
+  width: 100%;
+}
+
+.billing_form form input[type=text] {
+  width: 40%;
+  padding: 10px;
+  border: 1px solid #4445;
+  border-radius: 2px;
+}
+
+.billing_form form input[type=text]:focus {
+  border: 1px solid #f008;
+}
+
+.billing_form form label span {
+  float: left;
+  width: 200px;
+  text-align: right;
+  margin-right: 20px;
+  font-size: 15px;
+  color: #023;
+  padding: 10px 0px;
+}
+
+.billing_form form input[type=checkbox] {
+  padding: 10px;
+  float: left;
+}
+
+a#receive_email {
+  font-size: 13px;
+  color: #2229;
+}
+
+a#create_acc {
+  color: #024;
+  font-size: 15px;
+}
+
+.order {
+  border: 1px solid #4442;
+  padding: 10px;
+  float: left;
+  width: 100%;
+  margin: 10px 0px;
+}
+
+.order table {
+  background-color: #fff;
+  border: 1px solid #3334;
+  padding: 10px;
+  float: left;
+  width: 42%;
+  margin-left: 200px;
+}
+
+.order table th {
+  text-align: left;
+  color: #444;
+  font-size: 17px;
+}
+
+.order table td {
+  color: #023;
+  font-size: 15px;
+  background-color: #7772;
+  padding: 10px;
+  width: 50%;
+}
+
+.billing_form form .payment_wrapper {
+  float: left;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #4441;
+  margin: 10px 0px;
+}
+
+.billing_form form .payment_method {
+  float: left;
+  width: 80%;
+  margin-left: 200px;
+}
+
+.billing_form form .payment_method label span {
+  float: none;
+  color: #023;
+  font-size: 17px;
+}
+
+.billing_form form .payment_method p {
+  font-size: 13px;
+  color: #2226;
+  border-bottom: 1px solid #7771;
+  padding: 5px 20px;
+}
+
+.book_now {
+  padding: 10px;
+  text-align: center;
+  float: left;
+  width: 100%;
+}
+
+.billing_form form input[type=submit] {
+  background-color: #023;
+  color: #ddd;
+  padding: 10px;
+  border: 1px solid #7777;
+  border-radius: 2px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 44%;
+  margin-right: 200px;
+}
+
+.billing_form form input[type=submit]:hover {
+  opacity: 0.7;
+}

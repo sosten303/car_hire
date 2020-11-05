@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="css/fontawesome/css/all.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap-grid.min.css" />
-    <link rel="stylesheet" type="text/css" href="css/car_details.css">
+    <link rel="stylesheet" type="text/css" href="css/billing.css">
 </head>
 <body>
 
@@ -48,80 +48,113 @@
 <section>
    <div class="car_details">
     <div class="row">
-      <div class="col-md-12">
-        <div class="car_img">
-          <img src="img/kindpng_lr.png">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+        <div class="car_wrapper">
+            <div class="car_content">
+              <div class="car_img">
+                <img src="img/kindpng_lr.png">
+              </div>
+              <div class="car_name">
+                <h3>Land Rover <small><a href="#">Modify</a></small></h3>
+                <h4>Range Rover Sport or smilar</h4>
+                <p>Automatic</p>
+              </div>
+            </div>
+
+            <div class="car_reservation">
+                  <p>Location <small><a href="#">Modify</a></small></p>
+                  <span>New York JFK International Airport (JFK)</span>
+                <div class="pickup">
+                    <p>Pick-up date <small><a href="#">Modify</a></small></p>
+                    <span>Fri, Nov 21 at 12:00PM</span>
+                </div>
+                <div class="return">
+                    <p>Return Date <small><a href="#">Modify</a></small></p>
+                    <span>Sat, Nov 22 at 12:00PM</span>
+                    <p>Estimated total $106.25</p>
+               </div>
+            </div>
         </div>
       </div>
+      <div class="col-md-1"></div>
       </div>
    </div>
 </section>
 
 <section>
   <div class="row">
-    <div class="col-md-1">col</div>
+    <div class="col-md-1"></div>
     <div class="col-md-10">
-      <h1>2. Continue Booking</h1>
-      <h3>Billing section</h3>
-      <p>Fill the form to continue with the reservation</p>
+      <div class="billing_header">
+        <h1>2. Continue Booking</h1>
+        <h4>Billing section</h4>
+        <p>Fill the form to continue with the reservation</p>
+      </div>
 
+      <div class="billing_form">
+        <h4>Personal Details</h4>
       <form>
         <label>
-          <span>First name</span>
-          <input type="text" name="" placeholder="first name">
+          <span>First name :</span>
+          <input type="text" name="" placeholder="First name">
         </label>
         <p></p>
         <label>
-          <span>Last name</span>
-          <input type="text" name="" placeholder="last name">
+          <span>Last name :</span>
+          <input type="text" name="" placeholder="Last name">
         </label>
         <p></p>
         <label>
-          <span>Phone number</span>
+          <span>Phone number :</span>
           <input type="text" name="" placeholder="eg +260...">
         </label>
         <p></p>
         <label>
-          <span>Email Address</span>
+          <span>Email Address  :</span>
           <input type="text" name="" placeholder="name@mail.com">
         </label>
-        <input type="checkbox" name="" checked="checked">
-           <span> Receive Email Promotions from CarHire.
-                 By selecting this box, you would like to receive email promotions, surveys and offers from National Car Rental. Note that your email interactions can be used to perform analytics and produce content & ads tailored to your interests. Please understand that there is no charge and that you can unsubscribe at any time by (i) using the links provided in the emails or (ii) contacting us. Please consult our Privacy Policy and our Cookie Policy to find out more.
-          </span>
-        <p></p>
+        <p></p> 
         <label>
-          <span>Physical address</span>
-          <input type="text" name="" placeholder="address">
+          <span></span>
+        <input type="checkbox" name="" checked="checked">
+            <a id="receive_email">Receive Email Promotions from CarHire.
+                 By selecting this box, you would like to receive email promotions, surveys and offers from CarHire Rental. Note that your email interactions can be used to perform analytics and produce content & ads tailored to your interests.
+             </a>
         </label>
         <p></p>
         <label>
-          <span>City</span>
+          <span>Physical address :</span>
+          <input type="text" name="" placeholder="Address">
+        </label>
+        <p></p>
+        <label>
+          <span>City :</span>
           <input type="text" name="" placeholder="City">
         </label>
         <p></p>
         <label>
-          <span>Country</span>
+          <span>Country :</span>
           <input type="text" name="" placeholder="Country">
         </label>
         <p></p>
         <label>
-          <span>Zip code</span>
+          <span>Zip code :</span>
           <input type="text" name="" placeholder="Zip code">
         </label>
         <p></p>
         <label>
           <span></span>
-          <input type="checkbox" checked="checked"> Create an account
+          <input type="checkbox" checked="checked"> <a id="create_acc">Create an account</a>
         </label>
 
-        <hr>
-
+        <div class="order">
         <h4>Your Order</h4>
         <table>
+          <tbody>
           <tr>
-            <td>Product</td>
-            <td>Total</td>
+            <th>Product</th>
+            <th>Total</th>
           </tr>
           <tr>
             <td>Car Booking *1</td>
@@ -135,42 +168,42 @@
             <td>Total</td>
             <td>$10.00</td>
           </tr>
+         </tbody>
         </table>
+      </div>
         
-          ------------------------------
+          <div class="payment_wrapper">
           <h4>payment method</h4>
-          <div>
+          <div class="payment_method">
             <label>
             <input type="radio" name="payment" value="bank transfer" checked="checked">
-            <span>Direct bank transfer</span>
+            <span>Direct bank transfer <i class="fas fa-university"></i></span>
           </label>
           <p>*comment: make your payments directly into our bank account. please
           use your Order ID as the payment reference. your order will not be
           shipped until the funds have cleared in our account</p>
-          -----------------------------------------------------------------
-        </div>
-
-        <div>
+        
         <label>
           <input type="radio" name="payment" value="check payment">
-          <span>check payments</span>
+          <span>check payments <i class="fas fa-money-check-alt"></i></span>
         </label>
           <p>*comment: Please send a check to Store Name, Store Street, Store Town,
           Store State/Country, Store Postcode.</p>
-          -------------------------------------------------------------------
-        </div>
-
-        <div>
+        
           <label>
             <input type="radio" name="payment" value="cash on delivery">
-          <span>Cash on delivery</span>
+          <span>Cash on delivery <i class="fas fa-money-bill"></i></span>
         </label>
           <p>*comment: Pay with Cash upon delivery.</p>
-        </div>
+      </div>
+    </div>
+    <div class="book_now">
         <input type="submit" value=" Book now / place order">
+      </div>
       </form>
     </div>
-    <div class="col-md-1">col</div>
+  </div>
+    <div class="col-md-1"></div>
   </div>
 </section>
 </body>
