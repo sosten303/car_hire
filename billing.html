@@ -45,7 +45,7 @@
        <div class="col-md-1"></div>
     </div>
   </nav>
-<section>
+<section id="car_details_bg">
    <div class="car_details">
     <div class="row">
       <div class="col-md-1"></div>
@@ -63,8 +63,11 @@
             </div>
 
             <div class="car_reservation">
+               <div class="location">
                   <p>Location <small><a href="#">Modify</a></small></p>
                   <span>New York JFK International Airport (JFK)</span>
+                </div>
+                <div class="pickup_location_wrapper">
                 <div class="pickup">
                     <p>Pick-up date <small><a href="#">Modify</a></small></p>
                     <span>Fri, Nov 21 at 12:00PM</span>
@@ -72,8 +75,9 @@
                 <div class="return">
                     <p>Return Date <small><a href="#">Modify</a></small></p>
                     <span>Sat, Nov 22 at 12:00PM</span>
-                    <p>Estimated total $106.25</p>
                </div>
+             </div>
+                    <p id="total">Estimated total: $106.25</p>
             </div>
         </div>
       </div>
@@ -158,26 +162,27 @@
           </tr>
           <tr>
             <td>Car Booking *1</td>
-            <td>$10.00</td>
+            <td>$106.00</td>
           </tr>
           <tr>
             <td>Subtotal</td>
-            <td>$10.00</td>
+            <td>$106.00</td>
           </tr>
           <tr>
             <td>Total</td>
-            <td>$10.00</td>
+            <td>$106.00</td>
           </tr>
          </tbody>
         </table>
       </div>
         
           <div class="payment_wrapper">
-          <h4>payment method</h4>
+          <h4>Choose payment method</h4>
+
           <div class="payment_method">
             <label>
             <input type="radio" name="payment" value="bank transfer" checked="checked">
-            <span>Direct bank transfer <i class="fas fa-university"></i></span>
+            <span>Direct bank transfer</span><i class="fas fa-university" id="bank"></i>
           </label>
           <p>*comment: make your payments directly into our bank account. please
           use your Order ID as the payment reference. your order will not be
@@ -185,14 +190,14 @@
         
         <label>
           <input type="radio" name="payment" value="check payment">
-          <span>check payments <i class="fas fa-money-check-alt"></i></span>
+          <span>check payments</span><i class="fas fa-money-check-alt"></i>
         </label>
           <p>*comment: Please send a check to Store Name, Store Street, Store Town,
           Store State/Country, Store Postcode.</p>
         
           <label>
             <input type="radio" name="payment" value="cash on delivery">
-          <span>Cash on delivery <i class="fas fa-money-bill"></i></span>
+          <span>Cash on delivery</span><i class="fas fa-money-bill"></i>
         </label>
           <p>*comment: Pay with Cash upon delivery.</p>
       </div>

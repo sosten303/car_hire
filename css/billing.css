@@ -130,12 +130,17 @@ body {
 /*================================*/
 /*// Car Details //*/
 
+section#car_details_bg {
+  background-image: url(../img/building.jpg);
+  background-size: 100%;
+  background-attachment: fixed;
+}
 .car_details {
-	background-color: #0008;
+	background-color: rgba(0,0,0,0.7);
+  padding: 
 }
 
 .car_img {
-	background-color: #fff;
 	padding: 40px 10px;
 }
 
@@ -148,21 +153,21 @@ body {
 }
 
 .car_wrapper {
+  background-color: #fff9;
   margin-top: 75px;
-  background-color: yellow;
   float: left;
   width: 100%;
   padding: 50px;
 }
 
 .car_content {
-  background-color: #0007;
+  padding: 2px;
   float: left;
   width: 30%;
+  margin-left: 10px;
 }
 
 .car_name {
-  background-color: #999;
   padding: 1px;
 }
 
@@ -191,8 +196,55 @@ body {
 }
 
 .car_reservation {
-  background-color: #0009;
   float: left;
+  width: 65%;
+  padding: 42px 20px;
+  margin-left: 35px;
+  border-left: 1px solid #3338;
+}
+
+.car_reservation p {
+  font-size: 17px;
+  margin: 5px auto;
+}
+
+.car_reservation div.location {
+  margin-bottom: 30px;
+  border-bottom: 1px solid #4441;
+}
+
+.car_reservation p#total {
+  font-size: 20px;
+  color: #111;
+  float: left;
+  padding: 10px 0px;
+}
+
+.car_reservation small a {
+  font-size: 15px;
+  color: #023;
+}
+
+.car_reservation span {
+  font-size: 20px;
+  color: #023;
+}
+
+.car_reservation div.pickup_location_wrapper {
+  float: left;
+  width: 100%;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #4441;
+}
+
+.car_reservation div.pickup {
+  float: left;
+  width: 45%;
+}
+
+.car_reservation div.return {
+  float: left;
+  width: 45%;
 }
 
 /*============================*/
@@ -301,7 +353,7 @@ a#create_acc {
   width: 50%;
 }
 
-.billing_form form .payment_wrapper {
+.billing_form form div.payment_wrapper {
   float: left;
   width: 100%;
   padding: 10px;
@@ -309,23 +361,36 @@ a#create_acc {
   margin: 10px 0px;
 }
 
-.billing_form form .payment_method {
+.billing_form form div.payment_method {
   float: left;
   width: 80%;
   margin-left: 200px;
 }
 
-.billing_form form .payment_method label span {
+.billing_form form div.payment_method label span {
   float: none;
   color: #023;
   font-size: 17px;
 }
 
-.billing_form form .payment_method p {
+.billing_form form div.payment_method p {
   font-size: 13px;
   color: #2226;
   border-bottom: 1px solid #7771;
   padding: 5px 20px;
+}
+
+.billing_form form div.payment_method i {
+  color: #023;
+  font-size: 25px;
+  position: absolute;
+  margin-left: 35px;
+  border-radius: 100px;
+}
+
+.billing_form form div.payment_method i#bank {
+  margin-left: 10px;
+  font-size: 27px;
 }
 
 .book_now {

@@ -1,0 +1,288 @@
+/*Car Cartalogy Css file*/
+
+body {
+    font-family: sans-serif;
+    background-color: lavender;
+    overflow-x: hidden;
+    padding: 0px;
+    margin: 0px;
+  }
+
+  nav {
+    background-color: rgba(0,0,0,0.3);
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    z-index: 1;
+    padding: 0px !important;
+    font-size: 12px;
+    font-family: 'Lato', sans-serif;
+  }
+
+  ul#nav-bar {
+    padding: 5px;
+  }
+
+  ul#nav-bar li {
+    display: inline-block;
+    list-style-type: none;
+    margin-right: 5px;
+    padding: 8px 5px;
+  }
+
+   a#logo {
+   font-size: 22px;
+   color: #f4f4f4;
+   font-weight: bold;
+  }
+
+  ul#nav-bar li a {
+    padding: 5px;
+    text-decoration: none;
+    color: #fff;
+  }
+
+  ul#nav-bar li a:hover {
+    color: #f00;
+  }
+
+  #nav-bar-content {
+    display: inline;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    padding: 5px;
+  }
+
+  #nav-bar-content li {
+    margin-left: 10px;
+  }
+
+  #nav-bar-content li i {
+    margin-left: 3px;
+  }
+
+  nav li#book_btn {
+    background-color: rgba(255,25,0,0.6588);
+    font-size: 15px;
+    border-radius: 3px;
+    border: 1px solid red;
+    color: #eee;
+    cursor: pointer;
+  }
+
+  nav li#book_btn:hover {
+    background-color: red;
+  }
+
+  ul#reserv_nav, ul#vehicle_nav {
+    background-color: #111;
+    padding: 10px;
+    margin: 5px 20px 0px -5px;
+    border: 1px solid #4449;
+    border-radius: 2px;
+    position: absolute;
+    top: 40px;
+    display: none;
+  }
+
+  li#reservation:hover, li#vehicles:hover {
+    background-color: #111;
+    border: 1px solid #4449;
+    border-radius: 2px;
+    padding: 8px 4px 30px 4px;
+  }
+
+  li#reservation:hover ul#reserv_nav, li#vehicles:hover ul#vehicle_nav {
+    display: block;
+  }
+
+  li#reservation:hover a i, li#vehicles:hover a i {
+    color: #fff;
+    transform: rotateX(180deg);
+  }
+
+  ul#reserv_nav li, ul#vehicle_nav li {
+    list-style-type: none;
+    background-color: #222;
+    border: 1px solid #3339;
+    border-radius: 2px;
+    display: block;
+    padding: 1px;
+    margin: 1px auto;
+  }
+
+  ul#reserv_nav li:hover, ul#vehicle_nav li:hover {
+    background-color: #f009;
+    border: 1px solid #f008;
+  }
+
+  ul#reserv_nav li a, ul#vehicle_nav li a {
+    display: block;
+    padding: 5px;
+    margin: 1px;
+  }
+
+  ul#reserv_nav li:hover a, ul#vehicle_nav li:hover a {
+    color: #fff;
+  }
+
+/*================================*/
+/*// Car Details //*/
+
+.car_details {
+  background-color: #0007;
+}
+
+.car_img {
+  background-color: #000;
+  text-align: center;
+  padding: 40px 10px;
+  margin-top: 76px;
+}
+
+.car_img img {
+  max-width: 40vmax;
+  max-height: 90vmax;
+  margin: auto;
+  border-radius: 3px;
+}
+
+/*===========================*/
+/*// Car cart //*/
+
+.cart_header {
+  background-color: #4441;
+  padding: 10px;
+  border: 1px solid #4441;
+  margin: 10px 0px;
+}
+
+.cart_header h1 {
+  color: #333;
+}
+
+.cart_header p {
+  font-size: 13px;
+  color: #3337;
+}
+
+.cart_content {
+  background-color: #4441;
+  padding: 10px;
+  border: 1px solid #4441;
+}
+
+.cart_content table {
+  border: 1px solid #2221;
+}
+
+.cart_content table td {
+  background: #ccc;
+  color: #333;
+  font-size: 17px;
+  padding: 10px;
+  width: 50%;
+}
+
+.cart_content span {
+  font-size: 13px;
+  color: #3335;
+}
+
+.coupon {
+  background: #4441;
+  padding: 10px;
+  border: 1px solid #4441;
+  margin: 10px 0px;
+}
+
+.coupon form span {
+  display: block;
+  font-size: 15px;
+  font-weight: 600;
+  color: #023;
+}
+
+.coupon form input[type=text] {
+  padding: 8px;
+  width: 20%;
+  border: 1px solid #4445;
+  border-radius: 2px;
+}
+
+.coupon form input[type=text]:focus {
+  border: 1px solid #f008;
+}
+
+.coupon form input[type=submit] {
+  background-color: #023;
+  padding: 7px;
+  border: 1px solid #025;
+  border-radius: 2px;
+  color: #ddd;
+  cursor: pointer;
+}
+
+.update {
+  padding: 20px 0px;
+}
+
+.update input[type=submit] {
+  background-color: #059;
+  color: #eee;
+  font-size: 15px;
+  padding: 7px;
+  border: 1px solid #045;
+  border-radius: 2px;
+  width: 29%;
+  cursor: pointer;
+  /*margin-left: 100px;*/
+}
+
+.cart_total {
+  background-color: #4441;
+  padding: 10px;
+  border: 1px solid #4441;
+}
+
+.cart_total h3 {
+  color: #333;
+}
+
+.cart_total table {
+  background-color: #fff;
+  padding: 10px;
+}
+
+.cart_total thead {
+  background: yellow;
+  color: #333;
+  font-size: 20px;
+  font-weight: bold;
+}
+.cart_total table td {
+  padding: 10px;
+  color: #023;
+  width: 74%;
+}
+
+.cart_total span {
+  display: block;
+  font-size: 14px;
+  color: #3335;
+  padding: 10px 0px;
+}
+
+.cart_total a {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  background-color: #023;
+  color: #ddd;
+  padding: 8px;
+  border: 1px solid #025;
+  border-radius: 2px;
+  margin: 20px 0px;
+  width: 30%;
+}

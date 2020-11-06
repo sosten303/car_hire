@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="css/fontawesome/css/all.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap-grid.min.css" />
-    <link rel="stylesheet" type="text/css" href="css/car_details.css">
+    <link rel="stylesheet" type="text/css" href="css/cart.css">
 </head>
 <body>
 
@@ -59,23 +59,23 @@
 
 <section>
   <div class="row">
-    <div class="col-md-1">col</div>
+    <div class="col-md-1"></div>
     <div class="col-md-10">
-      <h1>3. Cartalogy</h1>
+      <div class="cart_header">
+           <h1>3. Cartalogy</h1>
+           <p>*Remember to apply a discount coupon code if you have any</p>
+       </div>
 
-      <form>
-
-        <hr>
-
-        <h4>Cartalogy</h4>
+       <div class="cart_content">
         <table>
+          <tbody>
           <tr>
-            <td>Product:</td>
+            <td>Product</td>
             <td>Car Booking Fees</td>
           </tr>
           <tr>
             <td>Price</td>
-            <td>$10.00</td>
+            <td>$106.00</td>
           </tr>
           <tr>
             <td>Quantity</td>
@@ -83,38 +83,49 @@
           </tr>
           <tr>
             <td>Total</td>
-            <td>$10.00</td>
+            <td>$106.00</td>
           </tr>
+        </tbody>
         </table>
+      <span>*comment: before a coupon is added</span>
+      </div>
 
-         <hr>
-        <div>
+      <div class="coupon">
+      <form>
         <label>
-          <span>Coupon Code</span>
-          <input type="text" name="" placeholder="your coupon code">
+          <span>Coupon Code:</span>
+          <input type="text" name="" placeholder="Your coupon code if any">
         </label>
           <input type="submit" value="Apply Coupon">
-          <br>
+    </form>
+  <div class="update">
+    <form>
+          <input type="hidden" name="price" value="price - coupon">
           <input type="submit" value="update cart">
-      </div>
-      <hr>
+    </form>
+  </div>
+</div>
+  <div class="cart_total">
+    <h3>Cart total</h3>
+          <span> *comment: after a coupon has been applied/ or not</span>
            <table>
-            <thead>Cart Totals</thead>
-             <tr>
-               <td>Subtotal</td>
-               <td>$10.00</td>
-             </tr>
-          
-             <tr>
-               <td>Total</td>
-               <td>$10.00</td>
-             </tr>
+            <tbody>
+               <tr>
+                 <td>Subtotal</td>
+                 <td>$106.00</td>
+               </tr>
+            
+               <tr>
+                 <td>Total</td>
+                 <td>$106.00</td>
+               </tr>
+           </tbody>
            </table>
 
-        <input type="submit" value="Proceed to chechout">
-      </form>
+        <a href="#">Procced to checkout</a>
     </div>
-    <div class="col-md-1">col</div>
+    </div>
+    <div class="col-md-1"></div>
   </div>
 </section>
 </body>
