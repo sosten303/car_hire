@@ -1,4 +1,4 @@
-/*Car Catalog Css file*/
+/*Car Checkout Css file*/
 
 body {
     font-family: sans-serif;
@@ -149,140 +149,68 @@ body {
 }
 
 /*===========================*/
-/*// Car cart //*/
+/*// Car Checkout //*/
 
-.cart_header {
-  background-color: #4441;
+.checkout {
+  background-color: #f9f9f9;
+  border: 1px solid #8883;
   padding: 10px;
-  border: 1px solid #4441;
   margin: 10px 0px;
 }
 
-.cart_header h1 {
-  color: #333;
+.checkout_header h1 {
+  color: #111;
 }
 
-.cart_header p {
-  font-size: 13px;
-  color: #3337;
+.checkout_header p {
+  font-size: 15px;
+  color: #111;
 }
 
-.cart_content {
-  background-color: #4441;
-  padding: 10px;
-  border: 1px solid #4441;
-}
-
-.cart_content table {
-  border: 1px solid #2221;
-}
-
-.cart_content table td {
-  background: #ccc;
-  color: #333;
-  font-size: 17px;
-  padding: 10px;
-  width: 50%;
-}
-
-.cart_content span {
-  font-size: 13px;
-  color: #3335;
-}
-
-.coupon {
-  background: #4441;
-  padding: 10px;
-  border: 1px solid #4441;
+.checkout_tb1 {
+  padding: 10px 0px;
   margin: 10px 0px;
+  border-bottom: 1px solid #8882;
 }
 
-.coupon form span {
-  display: block;
+.checkout_tb1 table {
+  padding: 10px;
+}
+.checkout_tb1 table th {
+  color: #111;
+  padding: 5px;
+  text-align: left;
+}
+
+.checkout_tb1 table td {
   font-size: 15px;
-  font-weight: 600;
-  color: #023;
+  color: #111;
 }
 
-.coupon form input[type=text] {
-  padding: 8px;
-  width: 20%;
-  border: 1px solid #4445;
-  border-radius: 2px;
-}
-
-.coupon form input[type=text]:focus {
-  border: 1px solid #f008;
-}
-
-.coupon form input[type=submit] {
-  background-color: #023;
-  padding: 7px;
-  border: 1px solid #025;
-  border-radius: 2px;
-  color: #ddd;
-  cursor: pointer;
-}
-
-.update {
-  padding: 20px 0px;
-}
-
-.update input[type=submit] {
-  background-color: #059;
-  color: #eee;
-  font-size: 15px;
-  padding: 7px;
-  border: 1px solid #045;
-  border-radius: 2px;
-  width: 29%;
-  cursor: pointer;
-  /*margin-left: 100px;*/
-}
-
-.cart_total {
-  background-color: #4441;
-  padding: 10px;
-  border: 1px solid #4441;
-}
-
-.cart_total h3 {
-  color: #333;
-}
-
-.cart_total table {
-  background-color: #fff;
-  padding: 10px;
-}
-
-.cart_total thead {
-  background: yellow;
-  color: #333;
-  font-size: 20px;
-  font-weight: bold;
-}
-.cart_total table td {
-  padding: 10px;
-  color: #023;
-  width: 74%;
-}
-
-.cart_total span {
-  display: block;
-  font-size: 14px;
-  color: #3335;
+.checkout_tb2 {
   padding: 10px 0px;
 }
 
-.cart_total a {
-  display: block;
-  text-decoration: none;
-  text-align: center;
-  background-color: #023;
-  color: #ddd;
-  padding: 8px;
-  border: 1px solid #025;
-  border-radius: 2px;
-  margin: 20px 0px;
-  width: 30%;
+.checkout_tb2 table {
+  padding: 10px;
+}
+
+.checkout_tb2 h3 {
+  color: #111;
+  font-size: 20px;
+  padding: 0px 20px;
+}
+
+.checkout_tb2 table th {
+  font-size: 17px;
+  color: #111;
+  text-align: left;
+  padding-left: 10px;
+}
+
+.checkout_tb2 table td {
+  font-size: 15px;
+  color: #111;
+  padding: 10px;
+  width: 50%;
 }

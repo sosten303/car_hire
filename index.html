@@ -49,167 +49,75 @@
 <main>
   <section id="book_form">
     <div class="row">
-      <div class="col-md-4"></div>
-      <div class="col-md-4">
-        <i class="fas fa-times" id="form_book_close_btn"></i>
+      <div class="col-md-3"></div>
+      <div class="col-md-6">
+         <div id="book_form_wrapper">
+                <i class="fas fa-times" id="form_book_close_btn"></i>
+            <form>
+                  <div>
+                    <h4>Start your Reservation</h4>
+                    <p>Required fields starts with * </p>
+                  </div>
+                <div>
+                   <label>
+                   <span>Pick Up location</span>
+                    <i class="fas fa-map-marker-alt"></i><input type="text" name="" placeholder="city, destrict or specific airport">
+                  </label>
+               </div>
+
+               <div>
+                 <label>
+                  <input type="checkbox" name="" checked="checked"><span>Return to the same Location</span>
+                 </label>
+               </div>
+                
+                 <div>
+                    <label> 
+                    <span>Pick-Up Date</span>
+                     <i class="fas fa-calendar"></i><input type="date" name="">
+                   </label>
+               </div>
+
+                <div>
+                  <label>
+                    <span>Pick-Up Time</span>
+                  <i class="fas fa-clock"></i><a>10:00AM</a><i class="fas fa-angle-down"></i>
+                  <input type="radio" name="pickup" value="10:00AM" checked="checked">
+                  <input type="radio" name="pickup" value="12:00PM">
+                  <input type="radio" name="pickup" value="15:00PM">
+                 </label>
+             </div>
+              
+                <div>
+                  <label>
+                  <span>Return Location</span>
+                  <i class="fas fa-map-marker-alt"></i><input type="text" name="" placeholder="city, destrict or specific airport">
+                 </label>
+              </div>
+
+               <div>
+                  <label>
+                  <span>Return Date</span>
+                  <i class="fas fa-calendar"></i><input type="date" name="">
+                 </label>
+              </div>
+                <div>
+                  <label>
+                    <span>Return Time</span>
+                    <i class="fas fa-clock"></i><a>10:00AM</a><i class="fas fa-angle-down"></i>
+                   <i class="fas fa-clock"></i><input type="radio" name="">
+                 </label>
+              </div>
+               
+                <p></p>
+                <input type="submit" name="" value="Continue Booking">
+
+            </form>
+         </div>
       </div>
-      <div class="col-md-4">
-        <div id="book_form_wrapper">
-        <form>
-          <h1>Rent a Car</h1>
-            <ul>
-              <li id="choose_car">Select your Car <i class="fas fa-angle-down"></i> </li>
-            </ul>
-            <div id="form_choose_car">
-              <label class="car_type_container">
-                 <input type="radio" name="cartype" value="Economy" checked="checked"><span>Audi</span>
-                 <div class="car_check_btn"></div>
-            </label>
-            <span class="car_tip_body car_tip"></span>
-            <div class="car_model">
-                   <a href="#">A16</a>
-                   <a href="#">Audi 2019</a>
-                   <a href="#">Audi vx200</a>
-                   <a href="#">Audi vx200</a>
-                   <a href="#">Audi vx200</a>
-                   <a href="#">Audi 2020</a>
-                   <a href="#" id="view_more">view more ...</a>
-                 </div>
-              <label class="car_type_container">
-                 <input type="radio" name="cartype" value="Luxury" checked="checked"><span>BMW</span>
-                 <div class="car_check_btn"></div>
-            </label>
-            <span class="car_tip_body car_tip"></span>
-            <div class="car_model">
-                   <a href="#">BMW 3 Series</a>
-                   <a href="#">BMW X5</a>
-                 </div>
-              <label class="car_type_container">
-                 <input type="radio" name="cartype" value="Standart" checked="checked"><span>MINI</span> 
-                 -Cooper, Cooper Convertible, countryman
-                 <div class="car_check_btn"></div>
-            </label>
-            <label class="car_type_container">
-                 <input type="radio" name="cartype" value="Standart" checked="checked"><span>Land Rover</span>
-                 -Range Rover Descovery, Range Rover Sport
-                 <div class="car_check_btn"></div>
-            </label>
-           </div>
+   </div>
 
-          <p id="border"></p>
-               <p>Pick Up location </p>
-           <label for="pl"> <!-- Pick Up location -->
-            <i class="fas fa-map-marker-alt"></i><input type="text" name="" placeholder="city, destrict or specific airport" id="pl">
-          </label>
-
-          <p>Pick Up Date and time</p>
-          <label> <!-- Pick Up Date -->
-           <i class="fas fa-calendar"></i><input type="date" name="">
-         </label>
-         
-          <label> <!-- Pick Up Time -->
-          <i class="fas fa-clock"></i><input type="time" name="">
-         </label>
-        
-          <p id="border"></p>
-          <p>Drop off location</p>
-          <label for="pd"> <!-- Drop Off Location -->
-          <i class="fas fa-map-marker-alt"></i><input type="text" name="" placeholder="city, destrict or specific airport" id="pd">
-         </label>
-
-          <p>Drop Off Date and Time</p>
-          <label> <!-- Drop Off Date -->
-          <i class="fas fa-calendar"></i><input type="date" name="">
-        </label>
-        
-          <label> <!-- Drop Off Time -->
-           <i class="fas fa-clock"></i><input type="time" name="">
-         </label>
-         
-          <!-- <p id="border"></p>
-          <label>Name
-          <input type="text" name="">
-         </label> -->
-         <!-- <br />
-          <label>Email
-          <input type="text" name="">
-          </label> -->
-          <p></p>
-          <input type="submit" name="" value="Continue Booking">
-
-          <!--
-          2-CART
-          *form: Product:          Car Booking Fees
-                 price:            $10.00
-                 Quanty:            1
-                 Total:            $10
-                 --------------------------------
-                 Coupon code[input field]     Apply coupon btn
-                          update cart btn [not active until coupon has been added].
-          ---------------------------------------------
-          cart totals[display fields]
-          subtotal:                 $10.00
-          total:                    $10.00
-          Proceed to chechout btn
-          -----------------------------------------------------------------------
-          3-CHECKOUT[another page]
-           -Returning customer? click here to login btn
-           *comment: If you have shopped with us before, please enter your details below.
-            if you are a new customer, please proceed to the Billing and Shipping section.
-            *form: Username or email, password, login btn, Remember me[check box], lost your
-            password?
-            ------------------------------------------------
-           -Have a coupon? Click here to enter your code
-           *comment: if you have a coupon code, please put it below.
-           *form: coupon code[input field], Apply coupon btn
-
-          1.[attached to the main form above] personal information/Billing details
-           after user click on continue booking
-          first name, last name, age, phone number, email, address, city, country, zip code, 
-          *create an acount[check box].
-          --------
-          Your Order[table]
-          product                  total
-          car booking *1           $10.00
-          subtotal                 $10.00
-          Total                    $10.00
-          ------------------------------
-          payment method[each option with a comment]
-          - Direct bank transfer
-          *comment: make your payments directly into our bank account. please
-          use your Order ID as the payment reference. your order will not be
-          shipped until the funds have cleared in our account
-          -----------------------------------------------------------------
-          -check payments
-          *comment: Please send a check to Store Name, Store Street, Store Town,
-          Store State/Country, Store Postcode.
-          -------------------------------------------------------------------
-          -Cash on delivery
-          *comment: Pay with Cash upon delivery.
-          Book now btn/ place order
-         ------------------------
-          4. CHECKOUT - thank you page [after placing an order]
-          Thank you. Your order has been recieved.
-
-          [slip]
-          ORDER NUMBER           DATE               TOTAL
-          3677                   August 3, 2020     $10.00
-          PAYMENT METHOD:
-          Direct bank transfer
-
-          Order details[table]
-          product                    total
-          Car Booking Fees           $10.00
-          Subtotal:                  $10.00
-          Payment method:            Direct bank transfer
-          Total:                     $10.00
-          -------------------------------------------
-           -->
-        </form>
-
-      </div>
-      </div>
-    </div>
+      <div class="col-md-3"></div>
   </section>
 
     <section id="carousel_content">
@@ -1052,27 +960,6 @@ bookingForm();
 
 </script>
 
-<script type="text/javascript">
-  function chooseCarOfChoice() {
-  var ChooseCar = document.getElementById("choose_car");
-  var ChooseCarContent = document.getElementById("form_choose_car");
-
-  ChooseCar.onclick = CarChoice;
-  function CarChoice() {
-    if (ChooseCarContent.style.display == "none") {
-      ChooseCarContent.style.display = "block";
-      // ChooseCarContent.style.position = "absolute";
-      // ChooseCarContent.style.right = "20px";
-      // ChooseCarContent.style.left = "20px";
-    }
-    else{
-      ChooseCarContent.style.display = "none";
-    }
-  }
-}
-chooseCarOfChoice();
-</script>
-
 <!-- ========== script for browse by ========== -->
 <script type="text/javascript">
   var numPsg = document.getElementById("numpsg");
@@ -1117,82 +1004,5 @@ chooseCarOfChoice();
   }
 </script>
 <!-- ================================================= -->
-<!-- =============== Script for Car Make ============= -->
-<script type="text/javascript">
-  // const slidesContainer = document.querySelector(".car_make_container");
-  // const slidesContainerWidth = slidesContainer.offsetWidth;
-  // const slides = document.getElementsByClassName("car_make");
-  // const carControl = document.querySelector('.car_control');
-  // const margin = 10;
-  // var items = 0; //from the responsive array
-  // var totalItems = 0;
-  // var jumpSlideWidth = 0;
-
-  // responsive = [
-  //  {breakPoint:{width:0, item:1}},
-  //  {breakPoint:{width:600, item:2}},
-  //  {breakPoint:{width:1000, item:4}}
-  // ];
- 
- //get the item from the responsive array of objects
-//  function load() {
-//  for (let i = 0; i < responsive.length; i++) {
-//    if (window.innerWidth > responsive[i].breakPoint.width) {
-//       items = responsive[i].breakPoint.item;
-//    }
-//  }
-//  start();
-// }
-
- // define the width and margin for each slide
-// function start() {
-//  let totalItemsWidth=0;
-//  for (let i = 0; i < slides.length; i++) {
-//    slides[i].style.width = (slidesContainerWidth/items) - margin + "px";
-//    slides[i].style.margin = (margin/2) + "px";
-//    totalItemsWidth += slidesContainerWidth/items;
-//    totalItems++;
-//  }
-
- // define the width car_make_container
- // slidesContainer.style.width = totalItemsWidth + "px";
-
- // set up slides control i.e next and prev
-
-//  const allSlides = Math.ceil(totalItems/items);
-//  const ul = document.createElement("ul");
-//     for (let i=1; i<=allSlides; i++) {
-//         const li = document.createElement("li");
-//         li.id = i;
-//         li.innerHTML = i;
-//         li.setAttribute("onclick", "controlSlides(this)");
-//         ul.appendChild(li);
-//         if (i==1) {
-//           li.className = "car_active";
-//         }
-//   }
-//   carControl.appendChild(ul);
-// }
-
- // function controlSlides (ele) {
- //   const ul = carControl.children;
- //   const li = ul[0].children;
- //   var car_active;
- //   for (let i=0; i<li.length; i++) {
- //     if (li[i].className=="car_active") {
- //        car_active = i;
- //        li[i].className = "";
- //     }
-    
- //   }
-
-  //  ele.className = "car_active";
-  //  var numb = (ele.id-1)-car_active;
-  //  jumpSlideWidth = jumpSlideWidth + (slidesContainerWidth*numb);
-  //  slidesContainer.style.marginLeft =- jumpSlideWidth + "px";
-  // }
-
-  // window.onload = load();
-</script>
 </body>
 </html>
