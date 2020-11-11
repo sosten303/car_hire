@@ -54,64 +54,70 @@
          <div id="book_form_wrapper">
                 <i class="fas fa-times" id="form_book_close_btn"></i>
             <form>
-                  <div>
+                  <div class="reserve_header">
                     <h4>Start your Reservation</h4>
-                    <p>Required fields starts with * </p>
+                    <p>Required fields ends with * </p>
                   </div>
-                <div>
+                <div class="pickup_location">
                    <label>
-                   <span>Pick Up location</span>
+                   <span>Pick Up location *</span>
                     <i class="fas fa-map-marker-alt"></i><input type="text" name="" placeholder="city, destrict or specific airport">
                   </label>
                </div>
 
-               <div>
+               <div class="location_check">
                  <label>
                   <input type="checkbox" name="" checked="checked"><span>Return to the same Location</span>
                  </label>
                </div>
-                
-                 <div>
+                <div class="pickup_date_time_wrapper">
+                 <div class="pickup_date">
                     <label> 
-                    <span>Pick-Up Date</span>
+                    <span>Pick-Up Date *</span>
                      <i class="fas fa-calendar"></i><input type="date" name="">
                    </label>
                </div>
 
-                <div>
+                <div class="pickup_time">
                   <label>
-                    <span>Pick-Up Time</span>
-                  <i class="fas fa-clock"></i><a>10:00AM</a><i class="fas fa-angle-down"></i>
-                  <input type="radio" name="pickup" value="10:00AM" checked="checked">
-                  <input type="radio" name="pickup" value="12:00PM">
-                  <input type="radio" name="pickup" value="15:00PM">
+                    <span>Pick-Up Time *</span>
+                  <i class="fas fa-clock"></i><a id="pickup_field">Defult replace <i class="fas fa-angle-down" id="angle_down"></i></a>
+                  <div id="pickup_time_content">
+                      <input type="radio" name="pickup" value="10:00AM" class="radio_field">10:00AM
+                      <input type="radio" name="pickup" value="12:00PM" class="radio_field">12:00PM
+                      <input type="radio" name="pickup" value="15:00PM" class="radio_field">15:00PM
+                   </div>
                  </label>
              </div>
-              
-                <div>
+              </div>
+                <div class="return_location">
                   <label>
-                  <span>Return Location</span>
+                  <span>Return Location *</span>
                   <i class="fas fa-map-marker-alt"></i><input type="text" name="" placeholder="city, destrict or specific airport">
                  </label>
               </div>
-
-               <div>
-                  <label>
-                  <span>Return Date</span>
-                  <i class="fas fa-calendar"></i><input type="date" name="">
-                 </label>
-              </div>
-                <div>
-                  <label>
-                    <span>Return Time</span>
-                    <i class="fas fa-clock"></i><a>10:00AM</a><i class="fas fa-angle-down"></i>
-                   <i class="fas fa-clock"></i><input type="radio" name="">
-                 </label>
-              </div>
-               
-                <p></p>
-                <input type="submit" name="" value="Continue Booking">
-
+              <div class="return_date_time_wrapper">
+                 <div class="return_date">
+                    <label>
+                    <span>Return Date *</span>
+                    <i class="fas fa-calendar"></i><input type="date" name="">
+                   </label>
+                </div>
+                  <div class="return_time">
+                    <label>
+                      <span>Return Time *</span>
+                      <i class="fas fa-clock"></i><a>10:00AM <i class="fas fa-angle-down" id="angle_down"></i></a>
+                      <div style="display: none;">
+                        <input type="radio" name="return" value="10:00AM" checked="checked">
+                        <input type="radio" name="return" value="12:00PM">
+                        <input type="radio" name="return" value="15:00PM">
+                   </div>
+                   </label>
+                </div>
+             </div>
+                 <div class="booking">
+                   <input type="submit" name="" value="Continue Booking">
+                 </div>
             </form>
          </div>
       </div>
@@ -959,6 +965,39 @@ function searchCarPrice() {
 bookingForm();
 
 </script>
+<!-- ============================================================================================= -->
+
+<!-- ================ Booking Form ============= -->
+<script type="text/javascript">
+  var pickupTime = document.getElementById('pickup_field');
+  var pickupTimeContent = document.getElementById('pickup_time_content');
+  var radioInput = document.querySelectorAll ('input.radio_field')[0];
+
+  // for (var i = 0; i < radioInput.length; i++) {
+  //   var k = radioInput[i].value;
+  //    console.log(k); 
+  // }
+  
+  pickupTime.onclick = pickupFunction;
+  function pickupFunction() {
+    if (pickupTimeContent.style.display == 'none') {
+      pickupTimeContent.style.display = 'block'
+    }
+    else {
+      pickupTimeContent.style.display = 'none';
+    }
+  }
+
+  radioInput.onchange = pickupInput;
+   function pickupInput(){
+    
+    var k = radioInput.value;
+    pickupTime.innerHTML = k;
+  }
+</script>
+<!-- =========================================================================================== -->
+
+
 
 <!-- ========== script for browse by ========== -->
 <script type="text/javascript">

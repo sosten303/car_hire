@@ -142,110 +142,193 @@
   }
 
   #book_form_wrapper {
-    background-color: #eee;
-    /*width: 50%;*/
-    /*box-shadow: -2px 1px 10px rgba(0,0,0,0.87777);*/
+    background-color: #eeee;
+    float: left;
+    width: 100%;
     border-radius: 2px;
-    /*border: 1px solid rgba(255,0,0,0.5777);*/
     padding: 10px;
-    margin-top: 80px;
+    margin-top: 70px;
     position: relative;
     z-index: 1;
-    /*right: 50px;*/
   }
 
   i#form_book_close_btn {
-    background-color: #111;
+    background-color: #023;
     font-size: 18px;
     color: #fff;
     padding: 10px 13px;
     border-radius: 100px;
     position: absolute;
-    top: 10px;
-    right: 15px;
+    top: 20px;
+    right: 20px;
     cursor: pointer;
   }
 
   #book_form_wrapper form {
-    /*background: yellow;*/
     border-radius: 2px;
-    padding: 10px;
+    padding: 10px 10px 10px 100px;
+    float: left;
+    width: 100%;
   }
 
-  #book_form_wrapper form h4 {
-    font-size: 16px;
+  #book_form_wrapper form div.reserve_header {
+    border-bottom: 1px solid #4441;
+  }
+
+  #book_form_wrapper form div.reserve_header h4 {
+    font-size: 20px;
+    color: #023;
+    margin: 5px auto;
+  }
+
+  #book_form_wrapper form div.reserve_header p {
+    font-size: 15px;
+    color: #3337;
+  }
+
+  #book_form_wrapper form div.pickup_location, div.return_location {
+    padding: 10px 0px;
+    border-bottom: 1px solid #4441;
+    float: left;
+    width: 100%;
+  }
+
+  #book_form_wrapper form div.pickup_location span, div.return_location span {
+    display: block;
+    font-size: 15px;
     color: #023;
     margin: 10px auto;
   }
 
-  #book_form_wrapper form span {
+  #book_form_wrapper form div.pickup_location i, div.return_location i {
+    background-color: #0129;
+    position: absolute;
+    padding: 11px;
+  }
+
+  #book_form_wrapper form div.pickup_location input[type=text], div.return_location input[type=text] {
+    font-size: 15px;
+    width: 75.6%;
+    padding: 10px 0px 9px 50px;
+    border: 1px solid #000;
+
+  }
+
+  #book_form_wrapper form div.pickup_location input[type=text]:focus, div.return_location input[type=text]:focus {
+    border: 1px solid #f008;
+  }
+
+  div.location_check {
+    padding: 10px 0px;
+    border-bottom: 1px solid #4441;
+    float: left;
+    width: 100%;
+  }
+
+  div.location_check span {
+    font-size: 15px;
+    color: #0009;
+  }
+
+  div.pickup_date_time_wrapper, div.return_date_time_wrapper {
+    float: left;
+    width: 100%;
+    border-bottom: 1px solid #4441;
+  }
+
+  #book_form_wrapper form div.pickup_date, div.return_date {
+    float: left;
+    width: 35%;
+  }
+
+  #book_form_wrapper form div.pickup_date input[type=date], #book_form_wrapper form div.return_date input[type=date] {
+    width: 100%;
+    padding: 10px 0px 10px 50px;
+    border: 1px solid #000;
+    color: #333;
+    font-size: 15px;
+    font-family: sans-serif;
+  }
+
+  #book_form_wrapper form div.pickup_date span, div.return_date span {
+    color: #023;
+    font-size: 15px;
+    display: block;
+    margin: 5px auto;
+  }
+
+  #book_form_wrapper form div.pickup_date i, div.return_date i {
+    background-color: #0129;
+    position: absolute;
+    padding: 12px;
+  }
+
+  div.pickup_time, div.return_time {
+    float: left;
+    width: 35%;
+    margin-left: 30px;
+  }
+
+  #book_form_wrapper form div.pickup_time div#pickup_time_content {
+    display: none;
+    background-color: yellow;
+    padding: 10px;
+    position: absolute;
+    float: left;
+    width: 100%;
+  }
+
+  div.pickup_time span, div.return_time span {
+    display: block;
     font-size: 15px;
     color: #023;
     margin: 5px auto;
   }
 
-
-  #book_form_wrapper form label {
-     font-size: 14px;
-     color: #222;
-  }
-
-  #book_form_wrapper form label i {
-    background-color: #0129;
-    font-size: 15px;
+  div.pickup_time i, div.return_time i {
     position: absolute;
-    /*z-index: 1;*/
-    padding: 10px;
-    border: 1px solid #3335;
-    border-radius: 1px;
-    color: #eee;
+    background-color: #0129;
+    padding: 12px;
   }
 
-  #book_form_wrapper form input[type=text] {
+  div.pickup_time i#angle_down, div.return_time i#angle_down {
+    background-color: transparent;
+    margin-left: 40px;
+    margin-top: -10px;
+  }
+
+  div.pickup_time a, div.return_time a {
     background-color: #fff;
-    width: 80%;
-    padding: 7px 10px 9px 42px;
-    border: 1px solid #ccc;
-    border-radius: 0px 2px 2px 0px;
     font-size: 15px;
+    color: #333;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    border: 1px solid #000;
+    padding: 10px 0px 10px 50px;
+  } 
+
+  #book_form_wrapper form div.booking {
+    padding: 25px 0px;
+    float: left;
+    width: 100%;
   }
-
-
-  #book_form_wrapper form input[type=text]{
-  }
-
-  #book_form_wrapper form input[type=text]:focus {
-    border: 1px solid red;
-  }
-
-  #book_form_wrapper form input[type=date] {
-    margin-right: 6px;
-  }
-
-  #book_form_wrapper form input[type=date],#book_form_wrapper form input[type=time] {
-    width: 39%;
-    opacity: 0.7555;
-    padding: 8px 1px 8px 40px;
-    text-align: center;
-    border: 1px solid #ccc;
-    border-radius: 1px;
-    font-size: 15px;
-    color: #777;
-    font-family: sans-serif;
-  }
-
 
   #book_form_wrapper form input[type=submit] {
     background-color: #023;
+    display: block;
     padding: 7px 10px;
     color: #ccc;
     font-size: 15px;
     border: 1px solid #025;
     border-radius: 3px;
-    margin-top: 5px;
-    width: 80%;
+    width: 76%;
     cursor: pointer;
   }
+
+  #book_form_wrapper form input[type=submit]:hover {
+    opacity: 0.8;
+  } 
   
 /*###### Carousel ##############*/
 
@@ -325,7 +408,6 @@
   padding: 20px;
   display: none;
   position: absolute;
-  z-index: 20px;
 }
 
 .car_any_brand {
